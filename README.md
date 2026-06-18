@@ -2,15 +2,13 @@
 
 **Portfolio case study for AI product workflows in regulated enterprise software.**
 
+Live demo: https://ai-app-intelligence-suite.streamlit.app/
+
 This is a portfolio project, not a commercial product and not a production enterprise platform.
 
 It demonstrates how I design AI-assisted workflows that turn ambiguous compliance source material into reviewable, testable and audit-aware product decisions.
 
 > Positioning: I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
-
-## Live demo
-
-Add Streamlit link here after deployment.
 
 ## What this project demonstrates
 
@@ -22,6 +20,24 @@ Add Streamlit link here after deployment.
 6. QA traceability, including mandatory negative test coverage.
 7. Enterprise readiness judgment without claiming production completeness.
 8. Hands-on execution with a working Streamlit prototype, services, tests and documentation.
+
+## System flow
+
+The suite demonstrates a product workflow from regulatory material to reviewed product artefacts, safer communication and audit-ready evidence.
+
+```mermaid
+flowchart TD
+
+A[Regulatory source material] --> B[INTERPRET<br>Obligations<br>Requirements<br>Traceability]
+
+B --> C[DISCOVER<br>Gaps<br>Risks<br>Inconsistencies]
+
+C --> D[COMMUNICATE<br>Safer release messaging<br>Grounding<br>Risk scoring]
+
+D --> E[INVESTIGATE<br>Decision timelines<br>Evidence<br>Citations]
+
+E --> F[Governance and Auditability<br>Logs<br>Staleness<br>Human review flags]
+```
 
 ## Hero workflow
 
@@ -53,6 +69,7 @@ If you are reviewing this project for hiring:
 - [`DEMO_WALKTHROUGH_FOR_HIRING.md`](DEMO_WALKTHROUGH_FOR_HIRING.md) — 90-second demo walkthrough.
 - [`PRODUCT_STRATEGY.md`](PRODUCT_STRATEGY.md) — ICP, personas, wedge, roadmap and metrics.
 - [`VALIDATION_LIMITATIONS.md`](VALIDATION_LIMITATIONS.md) — what is validated, synthetic, local or not production-ready.
+- [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md) — system architecture, workflow and real-vs-simulated explanation.
 
 ## Key product capabilities
 

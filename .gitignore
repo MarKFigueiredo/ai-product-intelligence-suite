@@ -1,8 +1,11 @@
 .env
 .venv/
-.streamlit/secrets.toml
-.local_runs/
-.local_exports/
-.local_connector_outbox/
 __pycache__/
+*.pyc
+.streamlit/secrets.toml
+.local_audit/
+benchmark/results/*.tmp
 .pytest_cache/
+.ruff_cache/
+.DS_Store
+README_old_backup.md
