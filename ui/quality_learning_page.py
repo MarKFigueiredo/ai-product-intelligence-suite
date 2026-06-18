@@ -26,4 +26,4 @@ def render_quality_learning_page(settings):
     else:
         st.info("No quality trends yet. Run workflows or use the seed script to populate local usage metrics.")
     zip_bytes = export_usage_zip_bytes()
-    st.download_button("Download current usage evidence ZIP", zip_bytes, "usage_evidence_dataset.zip", mime="application/zip")
+    st.download_button("Download current usage evidence ZIP", zip_bytes, "usage_evidence_dataset.zip", mime="application/zip", key="download_quality_learning_usage_evidence_zip")

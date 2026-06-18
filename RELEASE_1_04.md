@@ -12,3 +12,8 @@ This patch fixes a public-deployment UX issue found during local Ubuntu/VS Code 
 ## Why this matters
 
 For a portfolio app, reliability and clarity are more important than decorative custom HTML. This patch favors native Streamlit components so the public app renders consistently on local Ubuntu and Streamlit Community Cloud.
+
+
+## Patch note — download buttons
+
+Fixed duplicate Streamlit `download_button` auto-generated IDs by assigning explicit keys to all download buttons.

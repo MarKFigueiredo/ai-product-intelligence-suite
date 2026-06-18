@@ -30,6 +30,7 @@ def render_connector_handoff_page(settings: Dict[str, Any]) -> None:
         json.dumps(row["payload"], indent=2, ensure_ascii=False).encode("utf-8"),
         f"{selected.lower()}_payload.json",
         mime="application/json",
+        key=f"download_connector_payload_{selected.lower()}",
     )
     if st.button("Save/send payload"):
         result = send_or_save(

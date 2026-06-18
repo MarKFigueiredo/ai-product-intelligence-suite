@@ -151,7 +151,7 @@ def render_guided_demo_page(settings: Dict[str, Any]) -> None:
         state = hero_lineage_state()
         events = timeline_events(state)
         stale = detect_stale_artifacts(state["artifacts"], state["links"])
-        c1, c2 = st.columns([1.05, .95])
+        c1, c2 = st.columns([1.04, .95])
         with c1:
             render_vertical_timeline(events, "Visual timeline")
         with c2:
@@ -199,7 +199,7 @@ def render_guided_demo_page(settings: Dict[str, Any]) -> None:
             )
             st.success(f"Saved local export package: {path}")
         report = generate_real_usage_evidence_markdown()
-        st.download_button("Download current real usage evidence report", report, "REAL_USAGE_EVIDENCE_REPORT.md", mime="text/markdown")
+        st.download_button("Download current real usage evidence report", report, "REAL_USAGE_EVIDENCE_REPORT.md", mime="text/markdown", key="download_guided_real_usage_evidence_report")
         if st.button("Save REAL_USAGE_EVIDENCE_REPORT.md locally"):
             path = save_real_usage_evidence_report()
             st.success(f"Saved: {path}")

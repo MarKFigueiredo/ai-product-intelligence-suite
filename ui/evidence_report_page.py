@@ -19,9 +19,9 @@ def render_evidence_report_page(settings: Dict[str, Any]) -> None:
     c3.metric("Workflows", summary.get("workflows_total", 0))
     c4.metric("Avg latency", f"{summary.get('avg_latency_ms', 0)} ms")
     report = generate_real_usage_evidence_markdown()
-    st.download_button("Download report markdown", report, "REAL_USAGE_EVIDENCE_REPORT.md", mime="text/markdown")
-    st.download_button("Download usage JSON", export_usage_json_bytes(), "usage_metrics_export.json", mime="application/json")
-    st.download_button("Download usage ZIP", export_usage_zip_bytes(), "usage_metrics_export.zip", mime="application/zip")
+    st.download_button("Download report markdown", report, "REAL_USAGE_EVIDENCE_REPORT.md", mime="text/markdown", key="download_evidence_report_markdown")
+    st.download_button("Download usage JSON", export_usage_json_bytes(), "usage_metrics_export.json", mime="application/json", key="download_evidence_usage_json")
+    st.download_button("Download usage ZIP", export_usage_zip_bytes(), "usage_metrics_export.zip", mime="application/zip", key="download_evidence_usage_zip")
     if st.button("Save report locally"):
         path = save_real_usage_evidence_report()
         st.success(f"Saved: {path}")

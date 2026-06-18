@@ -99,20 +99,20 @@ def render_standard_export_bar(data: Dict[str, Any], title: str) -> str:
     st.markdown('<div class="export-bar"><b>Export package</b></div>', unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
     with c1:
-        st.download_button("Markdown", markdown.encode("utf-8"), safe_filename(title, "md"), "text/markdown", width="stretch")
+        st.download_button("Markdown", markdown.encode("utf-8"), safe_filename(title, "md"), "text/markdown", width="stretch", key=f"download_{safe_filename(title, 'md')}_markdown")
     with c2:
-        st.download_button("HTML / Print to PDF", html_doc.encode("utf-8"), safe_filename(title, "html"), "text/html", width="stretch")
+        st.download_button("HTML / Print to PDF", html_doc.encode("utf-8"), safe_filename(title, "html"), "text/html", width="stretch", key=f"download_{safe_filename(title, 'html')}_html")
     with c3:
         confluence = _to_confluence_markdown(markdown)
-        st.download_button("Confluence-style MD", confluence.encode("utf-8"), safe_filename(title + "_confluence", "md"), "text/markdown", width="stretch")
+        st.download_button("Confluence-style MD", confluence.encode("utf-8"), safe_filename(title + "_confluence", "md"), "text/markdown", width="stretch", key=f"download_{safe_filename(title + '_confluence', 'md')}_confluence")
     with c4:
         audit = _audit_trail(data, title)
-        st.download_button("Audit trail JSON", audit.encode("utf-8"), safe_filename(title + "_audit", "json"), "application/json", width="stretch")
+        st.download_button("Audit trail JSON", audit.encode("utf-8"), safe_filename(title + "_audit", "json"), "application/json", width="stretch", key=f"download_{safe_filename(title + '_audit', 'json')}_audit")
 
     if tables:
         with st.expander("Structured CSV exports", expanded=False):
             for name, rows in tables.items():
-                st.download_button(f"{name}.csv", rows_to_csv_bytes(rows), safe_filename(name, "csv"), "text/csv")
+                st.download_button(f"{name}.csv", rows_to_csv_bytes(rows), safe_filename(name, "csv"), "text/csv", key=f"download_{safe_filename(title, 'md')}_{safe_filename(name, 'csv')}")
     return markdown
 
 

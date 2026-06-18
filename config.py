@@ -107,7 +107,7 @@ CSS = """
 .hero h1 { color: white; font-size: 2.15rem; margin: 0 0 .18rem 0; letter-spacing: -0.035em; }
 .hero p { color: #dbeafe; font-size: 1rem; max-width: 1050px; margin: 0; line-height:1.45; }
 .page-intro {
-    padding: 1rem 1.05rem;
+    padding: 1rem 1.04rem;
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 18px;
@@ -126,7 +126,7 @@ CSS = """
 .ux-card, .landing-card, .quality-card, .persona-card, .evidence-card, .claim-card {
     border: 1px solid var(--border);
     border-radius: 20px;
-    padding: 1rem 1.05rem;
+    padding: 1rem 1.04rem;
     background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     margin-bottom: 0.82rem;
     box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 28px rgba(15, 23, 42, 0.035);
@@ -207,7 +207,7 @@ mark { background: #fef08a; padding: 0.05rem 0.15rem; border-radius: 0.2rem; }
 .timeline-body { font-size:.86rem; color:#334155; margin-top:.14rem; }
 .actor-chip { display:inline-block; padding:.35rem .55rem; border-radius:999px; background:#ecfeff; color:#0e7490; border:1px solid #a5f3fc; margin:.2rem; font-size:.83rem; }
 .alert-card { border:1px solid #fecaca; background:#fef2f2; color:#7f1d1d; border-radius:14px; padding:.8rem .95rem; margin-bottom:.6rem; }
-.callout { border-radius:18px; padding:1rem 1.05rem; margin:.8rem 0; border:1px solid #e2e8f0; }
+.callout { border-radius:18px; padding:1rem 1.04rem; margin:.8rem 0; border:1px solid #e2e8f0; }
 .callout.info { background:#eff6ff; border-color:#bfdbfe; color:#1e3a8a; }
 .callout.warning { background:#fffbeb; border-color:#fde68a; color:#92400e; }
 .callout.good { background:#ecfdf5; border-color:#bbf7d0; color:#166534; }

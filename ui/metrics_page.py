@@ -60,14 +60,14 @@ def render_usage_metrics_page(settings: dict | None = None) -> None:
             st.info("No usage runs recorded yet. Generate a package in Interpret, Discover, Communicate or Investigate to populate this table.")
         else:
             st.dataframe(df, width="stretch", hide_index=True)
-            st.download_button("Download runs CSV", rows_to_csv_bytes(df.to_dict("records")), "real_usage_runs.csv", "text/csv", width="stretch")
+            st.download_button("Download runs CSV", rows_to_csv_bytes(df.to_dict("records")), "real_usage_runs.csv", "text/csv", width="stretch", key="download_metrics_runs_csv")
 
     with tabs[1]:
         st.subheader("Metric snapshots")
         rows = list_metric_snapshots(limit=1000)
         if rows:
             st.dataframe(pd.DataFrame(rows), width="stretch", hide_index=True)
-            st.download_button("Download metric snapshots CSV", rows_to_csv_bytes(rows), "real_metric_snapshots.csv", "text/csv", width="stretch")
+            st.download_button("Download metric snapshots CSV", rows_to_csv_bytes(rows), "real_metric_snapshots.csv", "text/csv", width="stretch", key="download_metric_snapshots_csv")
         else:
             st.info("No metric snapshots yet.")
 
@@ -81,14 +81,14 @@ def render_usage_metrics_page(settings: dict | None = None) -> None:
                 row.update({f"metadata_{k}": v for k, v in (event.get("metadata") or {}).items() if isinstance(v, (str, int, float, bool)) or v is None})
                 flat_events.append(row)
             st.dataframe(pd.DataFrame(flat_events), width="stretch", hide_index=True)
-            st.download_button("Download data events CSV", rows_to_csv_bytes(flat_events), "real_data_events.csv", "text/csv", width="stretch")
+            st.download_button("Download data events CSV", rows_to_csv_bytes(flat_events), "real_data_events.csv", "text/csv", width="stretch", key="download_data_events_csv")
         else:
             st.info("No data events yet. Saving exports/imports/connectors will populate this table.")
 
     with tabs[3]:
         st.subheader("Export complete local usage dataset")
-        st.download_button("Download usage JSON", export_usage_json_bytes(), "ai_pm_real_usage_metrics.json", "application/json", width="stretch")
-        st.download_button("Download usage ZIP package", export_usage_zip_bytes(), "ai_pm_real_usage_metrics_package.zip", "application/zip", width="stretch")
+        st.download_button("Download usage JSON", export_usage_json_bytes(), "ai_pm_real_usage_metrics.json", "application/json", width="stretch", key="download_usage_metrics_json")
+        st.download_button("Download usage ZIP package", export_usage_zip_bytes(), "ai_pm_real_usage_metrics_package.zip", "application/zip", width="stretch", key="download_usage_metrics_zip_package")
 
         st.subheader("Import usage dataset")
         uploaded = st.file_uploader("Import usage JSON exported from this app", type=["json"])

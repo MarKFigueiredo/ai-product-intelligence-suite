@@ -64,7 +64,7 @@ This is intentionally deeper than a typical demo output. It shows how one compli
 
 ## Companion domain for MIT course
 
-1.04 adds a **companion playbook**, not a new app module: **AI Payments Compliance Assistant — SEPA / ISO 20022 structured addresses**.
+1.04 keeps the companion playbook, not a new app module: **AI Payments Compliance Assistant — SEPA / ISO 20022 structured addresses**.
 
 It is included because it supports a separate MIT Sloan course project on implementing agentic AI and demonstrates a third regulated domain beyond SAF-T and Swiss QR-Bill. It is deliberately kept outside the core Streamlit workflow to preserve scope discipline.
 

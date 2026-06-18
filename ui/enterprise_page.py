@@ -98,6 +98,7 @@ def render_enterprise_readiness_page(settings: dict | None = None) -> None:
         "signed_report_manifest_demo.json",
         "application/json",
         width="stretch",
+        key="download_enterprise_signed_report_manifest_json",
     )
 
     if st.button("Record demo audit event in SQLite", width="stretch"):

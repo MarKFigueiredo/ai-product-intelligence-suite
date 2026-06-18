@@ -324,7 +324,7 @@ def render_compliance_dashboard(
     render_grounding_heatmap(grounding_heatmap_items(citation_rows), "Rule-based grounding heatmap")
 
     support_matrix = build_obligation_support_matrix(data, citation_rows)
-    left, center, right = st.columns([1.05, 1.25, 1.05])
+    left, center, right = st.columns([1.04, 1.25, 1.04])
     with left:
         st.subheader("Source document highlights")
         st.markdown('<div class="source-panel">', unsafe_allow_html=True)
@@ -405,7 +405,7 @@ def render_source_quote_matrix(data: Dict[str, Any], citation_rows: List[Dict[st
     if matrix:
         st.dataframe(pd.DataFrame(matrix), width="stretch", hide_index=True)
         csv = pd.DataFrame(matrix).to_csv(index=False).encode("utf-8")
-        st.download_button("Download obligation source quote matrix CSV", csv, "obligation_source_quote_matrix.csv", "text/csv")
+        st.download_button("Download obligation source quote matrix CSV", csv, "obligation_source_quote_matrix.csv", "text/csv", key="download_obligation_source_quote_matrix_csv")
     else:
         st.info("No obligation support matrix available.")
 
@@ -417,7 +417,7 @@ def render_source_quote_matrix(data: Dict[str, Any], citation_rows: List[Dict[st
     selected = st.selectbox("Select a claim to inspect", range(len(labels)), format_func=lambda i: labels[i], key="deep_link_citation_select")
     row = citation_rows[selected]
     source = _source_by_id(sources).get(row.get("citation"))
-    c1, c2 = st.columns([1.05, 1.25])
+    c1, c2 = st.columns([1.04, 1.25])
     with c1:
         st.markdown("**Generated claim**")
         st.write(row.get("claim"))
@@ -518,7 +518,7 @@ def render_human_review_queue(data: Dict[str, Any], citation_rows: List[Dict[str
         render_metric_pill("High priority", str(high), "bad" if high else "good")
     with cols[2]:
         render_metric_pill("Primary owner", "Compliance/Product", "mid")
-    st.download_button("Download human review queue CSV", df.to_csv(index=False).encode("utf-8"), "human_review_queue.csv", "text/csv")
+    st.download_button("Download human review queue CSV", df.to_csv(index=False).encode("utf-8"), "human_review_queue.csv", "text/csv", key="download_human_review_queue_csv")
 
 
 def render_quality_metrics_panel(data: Dict[str, Any], citation_rows: List[Dict[str, Any]], gold_benchmark: Dict[str, Any] | None = None) -> None:
@@ -574,6 +574,7 @@ These are intentionally not model self-scores. Precision/recall require independ
         metric_rows.to_csv(index=False).encode("utf-8"),
         "interpret_quality_metrics.csv",
         "text/csv",
+        key="download_interpret_quality_metrics_csv",
     )
 
 
@@ -716,9 +717,9 @@ def render_reviewer_and_run_history(
     )
     manifest_json = __import__("json").dumps(manifest, ensure_ascii=False, indent=2)
     with c1:
-        st.download_button("Download final review report JSON", report_json.encode("utf-8"), "interpret_final_review_report.json", "application/json", width="stretch")
+        st.download_button("Download final review report JSON", report_json.encode("utf-8"), "interpret_final_review_report.json", "application/json", width="stretch", key="download_interpret_final_review_report_json")
     with c2:
-        st.download_button("Download signed manifest", manifest_json.encode("utf-8"), "interpret_signed_report_manifest.json", "application/json", width="stretch")
+        st.download_button("Download signed manifest", manifest_json.encode("utf-8"), "interpret_signed_report_manifest.json", "application/json", width="stretch", key="download_interpret_signed_manifest_json")
         if not can(role, "sign_report"):
             st.caption(f"Role `{role}` cannot sign in the RBAC simulation; manifest is marked draft-only.")
     with c3:
@@ -863,7 +864,7 @@ def render(settings: Dict[str, Any]) -> None:
         with st.expander("Gold obligations template", expanded=False):
             st.caption("Use this only when you want true run-specific obligation precision/recall. The gold set should be written independently of the model output.")
             st.code(_gold_template_json(), language="json")
-            st.download_button("Download gold obligations template", _gold_template_json().encode("utf-8"), "gold_obligations_template.json", "application/json")
+            st.download_button("Download gold obligations template", _gold_template_json().encode("utf-8"), "gold_obligations_template.json", "application/json", key="download_gold_obligations_template_json")
         current_text = st.text_area("Or paste current document text", value=SAMPLE_DOC, height=145)
         previous_text = st.text_area("Optional previous version text", value=PREVIOUS_DOC, height=95)
         business_context = st.text_input("Business context", value="Enterprise logistics/accounting software")
