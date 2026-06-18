@@ -9,3 +9,7 @@ benchmark/results/*.tmp
 .ruff_cache/
 .DS_Store
 README_old_backup.md
+local_runs/
+.local_runs/
+.local\ runs/
+local runs/

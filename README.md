@@ -4,11 +4,25 @@
 
 Live demo: https://ai-app-intelligence-suite.streamlit.app/
 
-This is a portfolio project, not a commercial product and not a production enterprise platform.
+This project is a portfolio case study, not a commercial product.
+
+It is not a production enterprise platform.
 
 It demonstrates how I design AI-assisted workflows that turn ambiguous compliance source material into reviewable, testable and audit-aware product decisions.
 
 > Positioning: I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
+
+## Reviewer signal checklist
+
+This portfolio case study demonstrates:
+
+- domain understanding in regulated enterprise software;
+- AI workflow design for product teams;
+- human-in-the-loop review;
+- risk-aware communication;
+- evaluation discipline;
+- enterprise readiness judgment;
+- product strategy.
 
 ## What this project demonstrates
 
