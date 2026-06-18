@@ -92,27 +92,81 @@ def render_grounding_heatmap(items: Sequence[Dict[str, Any]], title: str = "Grou
             render_score_bar(label, score, review)
 
 
+def _unique_download_key(base: str) -> str:
+    """Return a per-render unique key for Streamlit download buttons.
+
+    Streamlit requires keys to be unique across the full rendered page. Some
+    portfolio export panels can appear more than once with the same title and
+    filename, so filename-derived keys alone are not safe.
+    """
+    counter_key = "_ai_pm_download_button_counter"
+    st.session_state[counter_key] = int(st.session_state.get(counter_key, 0)) + 1
+    return f"{base}_{st.session_state[counter_key]}"
+
+
 def render_standard_export_bar(data: Dict[str, Any], title: str) -> str:
     markdown = dict_to_markdown(data, title)
     html_doc = markdown_to_html_document(markdown, title)
     tables = extract_named_tables(data)
+    export_slug = safe_filename(title, "export").replace(".", "_")
+
     st.markdown('<div class="export-bar"><b>Export package</b></div>', unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
+
     with c1:
-        st.download_button("Markdown", markdown.encode("utf-8"), safe_filename(title, "md"), "text/markdown", width="stretch", key=f"download_{safe_filename(title, 'md')}_markdown")
+        st.download_button(
+            "Markdown",
+            markdown.encode("utf-8"),
+            safe_filename(title, "md"),
+            "text/markdown",
+            width="stretch",
+            key=_unique_download_key(f"download_{export_slug}_markdown"),
+        )
+
     with c2:
-        st.download_button("HTML / Print to PDF", html_doc.encode("utf-8"), safe_filename(title, "html"), "text/html", width="stretch", key=f"download_{safe_filename(title, 'html')}_html")
+        st.download_button(
+            "HTML / Print to PDF",
+            html_doc.encode("utf-8"),
+            safe_filename(title, "html"),
+            "text/html",
+            width="stretch",
+            key=_unique_download_key(f"download_{export_slug}_html"),
+        )
+
     with c3:
         confluence = _to_confluence_markdown(markdown)
-        st.download_button("Confluence-style MD", confluence.encode("utf-8"), safe_filename(title + "_confluence", "md"), "text/markdown", width="stretch", key=f"download_{safe_filename(title + '_confluence', 'md')}_confluence")
+        st.download_button(
+            "Confluence-style MD",
+            confluence.encode("utf-8"),
+            safe_filename(title + "_confluence", "md"),
+            "text/markdown",
+            width="stretch",
+            key=_unique_download_key(f"download_{export_slug}_confluence"),
+        )
+
     with c4:
         audit = _audit_trail(data, title)
-        st.download_button("Audit trail JSON", audit.encode("utf-8"), safe_filename(title + "_audit", "json"), "application/json", width="stretch", key=f"download_{safe_filename(title + '_audit', 'json')}_audit")
+        st.download_button(
+            "Audit trail JSON",
+            audit.encode("utf-8"),
+            safe_filename(title + "_audit", "json"),
+            "application/json",
+            width="stretch",
+            key=_unique_download_key(f"download_{export_slug}_audit"),
+        )
 
     if tables:
         with st.expander("Structured CSV exports", expanded=False):
             for name, rows in tables.items():
-                st.download_button(f"{name}.csv", rows_to_csv_bytes(rows), safe_filename(name, "csv"), "text/csv", key=f"download_{safe_filename(title, 'md')}_{safe_filename(name, 'csv')}")
+                csv_slug = safe_filename(name, "csv").replace(".", "_")
+                st.download_button(
+                    f"{name}.csv",
+                    rows_to_csv_bytes(rows),
+                    safe_filename(name, "csv"),
+                    "text/csv",
+                    key=_unique_download_key(f"download_{export_slug}_{csv_slug}"),
+                )
+
     return markdown
 
 
