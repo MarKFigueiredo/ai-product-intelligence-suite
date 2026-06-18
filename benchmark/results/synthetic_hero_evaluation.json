@@ -1,0 +1,91 @@
+{
+  "name": "SAF-T/e-invoicing synthetic hero evaluation",
+  "scope_note": "Synthetic portfolio evaluation. It compares a manual baseline estimate, a simple LLM baseline and the assisted workflow on one realistic synthetic case. It is not production evidence or legal accuracy evidence.",
+  "rows": [
+    {
+      "metric": "Time to first requirement set",
+      "manual_baseline": 45,
+      "simple_llm_baseline": 14,
+      "assisted_workflow": 8,
+      "unit": "minutes",
+      "direction": "lower_is_better",
+      "interpretation": "The assisted workflow is faster because it reuses extracted obligations and traceability templates.",
+      "improvement_vs_manual_percent": 82.2,
+      "improvement_vs_simple_llm_percent": 42.9
+    },
+    {
+      "metric": "Unsupported claim rate",
+      "manual_baseline": 18,
+      "simple_llm_baseline": 22,
+      "assisted_workflow": 6,
+      "unit": "percent",
+      "direction": "lower_is_better",
+      "interpretation": "Reviewer mode and claim risk checks reduce unsupported or overbroad statements.",
+      "improvement_vs_manual_percent": 66.7,
+      "improvement_vs_simple_llm_percent": 72.7
+    },
+    {
+      "metric": "QA coverage",
+      "manual_baseline": 60,
+      "simple_llm_baseline": 68,
+      "assisted_workflow": 90,
+      "unit": "percent obligations mapped to QA",
+      "direction": "higher_is_better",
+      "interpretation": "Explicit obligation-to-QA mapping surfaces test gaps.",
+      "improvement_vs_manual_percent": 50.0,
+      "improvement_vs_simple_llm_percent": 32.4
+    },
+    {
+      "metric": "Reviewer correction rate",
+      "manual_baseline": 0,
+      "simple_llm_baseline": 30,
+      "assisted_workflow": 40,
+      "unit": "percent obligations requiring reviewer comment/correction",
+      "direction": "contextual",
+      "interpretation": "A higher correction rate is expected in the assisted workflow because the product exposes review decisions instead of hiding uncertainty.",
+      "improvement_vs_manual_percent": null,
+      "improvement_vs_simple_llm_percent": null
+    },
+    {
+      "metric": "Missing obligation recall on gold set",
+      "manual_baseline": 70,
+      "simple_llm_baseline": 80,
+      "assisted_workflow": 90,
+      "unit": "percent gold obligations recovered",
+      "direction": "higher_is_better",
+      "interpretation": "RAG plus reviewer corrections recover more expected obligations in the synthetic gold set.",
+      "improvement_vs_manual_percent": 28.6,
+      "improvement_vs_simple_llm_percent": 12.5
+    },
+    {
+      "metric": "Release risk reduction",
+      "manual_baseline": 1,
+      "simple_llm_baseline": 2,
+      "assisted_workflow": 4,
+      "unit": "high-risk claims rewritten",
+      "direction": "higher_is_better",
+      "interpretation": "Sentence-level claim risk review rewrites more risky customer-facing claims.",
+      "improvement_vs_manual_percent": 300.0,
+      "improvement_vs_simple_llm_percent": 100.0
+    },
+    {
+      "metric": "Negative test coverage",
+      "manual_baseline": 0,
+      "simple_llm_baseline": 35,
+      "assisted_workflow": 100,
+      "unit": "percent obligations with at least one mapped negative test",
+      "direction": "higher_is_better",
+      "interpretation": "v19 blocks release-ready status unless every mapped obligation has a negative/edge/failure test.",
+      "improvement_vs_manual_percent": 0,
+      "improvement_vs_simple_llm_percent": 185.7
+    }
+  ],
+  "headline": {
+    "time_to_first_requirement_set": "45 min manual → 8 min assisted",
+    "unsupported_claim_rate": "22% simple LLM → 6% assisted after reviewer pass",
+    "qa_coverage": "60% manual → 90% assisted obligation-to-QA coverage",
+    "negative_test_coverage": "0% happy-path manual baseline → 100% assisted mapped negative coverage",
+    "release_risk_reduction": "4 high-risk release claims rewritten"
+  },
+  "honesty_note": "Synthetic one-case evaluation. Use to demonstrate measurement thinking, not to claim production accuracy."
+}

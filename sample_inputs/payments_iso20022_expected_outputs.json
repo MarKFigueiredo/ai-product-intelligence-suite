@@ -1,0 +1,32 @@
+{
+  "domain": "payments_iso20022_structured_addresses",
+  "status": "companion_course_case_not_core_app_module",
+  "expected_obligations": [
+    {
+      "id": "PAY-ADDR-001",
+      "summary": "Town Name and Country Code should be handled as mandatory structured fields in the hybrid address format.",
+      "review_note": "Verify against official scheme documentation before public use."
+    },
+    {
+      "id": "PAY-ADDR-002",
+      "summary": "Hybrid address support should limit free-text address lines to the permitted line count and length defined by the source rule.",
+      "review_note": "Numeric thresholds are high-risk and require source verification."
+    },
+    {
+      "id": "PAY-ADDR-003",
+      "summary": "Fully structured address support should map each address component to a dedicated field.",
+      "review_note": "Confirm exact field list by message type."
+    },
+    {
+      "id": "PAY-ADDR-004",
+      "summary": "Legacy customer, beneficiary and counterparty address data requires a migration or exception-handling path.",
+      "review_note": "This is an implementation concern inferred from process impact, not necessarily a direct regulatory obligation."
+    }
+  ],
+  "negative_test_examples": [
+    "Reject or flag a payment where Town Name is missing in hybrid mode.",
+    "Reject or flag a payment where Country Code is missing in hybrid mode.",
+    "Reject or flag a free-text address line that exceeds the permitted maximum length.",
+    "Flag legacy address records that cannot be mapped to structured fields without human review."
+  ]
+}

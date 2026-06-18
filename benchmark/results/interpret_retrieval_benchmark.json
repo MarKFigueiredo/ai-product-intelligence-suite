@@ -1,0 +1,133 @@
+{
+  "evaluation_type": "local retrieval benchmark; no LLM generation",
+  "questions": 8,
+  "retrieval_hit_rate": 1.0,
+  "average_top_score": 0.42341321870705045,
+  "limitations": [
+    "Synthetic document and hand-written expected terms.",
+    "Measures retrieval coverage only, not full obligation extraction accuracy.",
+    "Uses deterministic local embeddings for reproducibility and zero API cost."
+  ],
+  "rows": [
+    {
+      "id": "Q1",
+      "query": "What customer identifier is required for SAF-T invoice exports?",
+      "expected_terms": [
+        "customer tax identification number",
+        "tax identifiers"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.3782,
+      "hit": true
+    },
+    {
+      "id": "Q2",
+      "query": "When should missing tax identifiers be corrected?",
+      "expected_terms": [
+        "before export"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.5657,
+      "hit": true
+    },
+    {
+      "id": "Q3",
+      "query": "Which totals need validation?",
+      "expected_terms": [
+        "invoice total",
+        "gross total",
+        "inconsistent totals"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.2706,
+      "hit": true
+    },
+    {
+      "id": "Q4",
+      "query": "What should happen when fields are unavailable?",
+      "expected_terms": [
+        "human review",
+        "rather than inventing values"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.3557,
+      "hit": true
+    },
+    {
+      "id": "Q5",
+      "query": "What evidence should the product maintain?",
+      "expected_terms": [
+        "validation evidence",
+        "audit checks"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.5315,
+      "hit": true
+    },
+    {
+      "id": "Q6",
+      "query": "What wording should release communications avoid?",
+      "expected_terms": [
+        "full legal compliance",
+        "avoid claiming"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.5142,
+      "hit": true
+    },
+    {
+      "id": "Q7",
+      "query": "What e-invoicing fields are mentioned?",
+      "expected_terms": [
+        "structured invoice identifiers",
+        "issue date",
+        "buyer and seller tax identifiers"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.3223,
+      "hit": true
+    },
+    {
+      "id": "Q8",
+      "query": "How should validation checks be described?",
+      "expected_terms": [
+        "decision-support tooling"
+      ],
+      "retrieved_sources": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "top_score": 0.4492,
+      "hit": true
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+2026-01-10: Customer reported that SAF-T export completed despite missing CustomerTaxID.
+2026-01-12: Support escalated issue to Product.
+2026-01-15: Product confirmed missing critical validation rule.
+2026-01-20: Engineering implemented blocking validation for CustomerTaxID.
+2026-01-22: QA found foreign customer edge case still failing.
+2026-01-25: Release manager delayed deployment pending compliance wording review.

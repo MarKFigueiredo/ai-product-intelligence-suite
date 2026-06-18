@@ -1,0 +1,1 @@
+Invoices included in a Portuguese SAF-T export should include invoice date, tax code and invoice total. Validation of customer tax identifiers is recommended before submission.

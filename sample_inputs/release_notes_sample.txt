@@ -1,0 +1,1 @@
+Changed invoice validation logic for Portuguese SAF-T exports. The system now validates CustomerTaxID, InvoiceDate, TaxCode, AccountID and invoice totals before generating the SAF-T file. Invalid records are blocked and displayed in a validation report.

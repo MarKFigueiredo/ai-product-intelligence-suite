@@ -1,0 +1,69 @@
+{
+  "name": "SAF-T/e-invoicing synthetic hero evaluation",
+  "scope_note": "Synthetic portfolio evaluation. It compares a manual baseline estimate, a simple LLM baseline and the assisted workflow on one realistic synthetic case. It is not production evidence or legal accuracy evidence.",
+  "metrics": [
+    {
+      "metric": "Time to first requirement set",
+      "manual_baseline": 45,
+      "simple_llm_baseline": 14,
+      "assisted_workflow": 8,
+      "unit": "minutes",
+      "direction": "lower_is_better",
+      "interpretation": "The assisted workflow is faster because it reuses extracted obligations and traceability templates."
+    },
+    {
+      "metric": "Unsupported claim rate",
+      "manual_baseline": 18,
+      "simple_llm_baseline": 22,
+      "assisted_workflow": 6,
+      "unit": "percent",
+      "direction": "lower_is_better",
+      "interpretation": "Reviewer mode and claim risk checks reduce unsupported or overbroad statements."
+    },
+    {
+      "metric": "QA coverage",
+      "manual_baseline": 60,
+      "simple_llm_baseline": 68,
+      "assisted_workflow": 90,
+      "unit": "percent obligations mapped to QA",
+      "direction": "higher_is_better",
+      "interpretation": "Explicit obligation-to-QA mapping surfaces test gaps."
+    },
+    {
+      "metric": "Reviewer correction rate",
+      "manual_baseline": 0,
+      "simple_llm_baseline": 30,
+      "assisted_workflow": 40,
+      "unit": "percent obligations requiring reviewer comment/correction",
+      "direction": "contextual",
+      "interpretation": "A higher correction rate is expected in the assisted workflow because the product exposes review decisions instead of hiding uncertainty."
+    },
+    {
+      "metric": "Missing obligation recall on gold set",
+      "manual_baseline": 70,
+      "simple_llm_baseline": 80,
+      "assisted_workflow": 90,
+      "unit": "percent gold obligations recovered",
+      "direction": "higher_is_better",
+      "interpretation": "RAG plus reviewer corrections recover more expected obligations in the synthetic gold set."
+    },
+    {
+      "metric": "Release risk reduction",
+      "manual_baseline": 1,
+      "simple_llm_baseline": 2,
+      "assisted_workflow": 4,
+      "unit": "high-risk claims rewritten",
+      "direction": "higher_is_better",
+      "interpretation": "Sentence-level claim risk review rewrites more risky customer-facing claims."
+    },
+    {
+      "metric": "Negative test coverage",
+      "manual_baseline": 0,
+      "simple_llm_baseline": 35,
+      "assisted_workflow": 100,
+      "unit": "percent obligations with at least one mapped negative test",
+      "direction": "higher_is_better",
+      "interpretation": "v19 blocks release-ready status unless every mapped obligation has a negative/edge/failure test."
+    }
+  ]
+}

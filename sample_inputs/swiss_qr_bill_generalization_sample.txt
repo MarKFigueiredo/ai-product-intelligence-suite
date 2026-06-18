@@ -1,0 +1,13 @@
+Swiss QR-Bill generalization sample (portfolio, not legal advice).
+
+A Swiss QR-bill consists of a receipt and a payment section. The Swiss QR Code contains the payment information needed for invoicing and payment, and the visible payment part repeats the information in plain text so the recipient can check it before approving payment.
+
+For payments with a structured QR reference, the account to be credited must be a QR-IBAN. A QR-IBAN is intended only for incoming payments and, in the QR-bill guidelines, can only be used for invoicing and payments in CHF.
+
+The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit. The QR reference must not consist exclusively of zeros and can only be used in combination with a QR-IBAN.
+
+A Creditor Reference follows ISO 11649, starts with RF plus check digits, has 5 to 25 alphanumerical characters, and can only be used with an IBAN for invoicing in CHF or EUR.
+
+Since the 22 November 2025 requirements, QR-bills must use structured address elements in the Swiss QR Code. The extended Swiss Payment Standards character set applies.
+
+If a QR-bill is sent electronically as a PDF and then printed for processing, the creditor must ensure that paper/payment-part requirements are met. Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.

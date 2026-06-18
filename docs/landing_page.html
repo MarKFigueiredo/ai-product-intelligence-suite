@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Product Intelligence Suite</title>
+  <style>
+    body { margin: 0; font-family: Inter, Arial, sans-serif; color: #0f172a; background: #f8fafc; line-height: 1.55; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 28px 20px; }
+    .hero { border-radius: 28px; padding: 56px 48px; color: white; background: linear-gradient(135deg, #0f172a, #1e293b 55%, #312e81); }
+    h1 { font-size: 48px; line-height: 1.05; margin: 0 0 18px; }
+    h2 { font-size: 30px; margin-top: 42px; }
+    h3 { margin-bottom: 8px; }
+    .hero p { color: #cbd5e1; font-size: 20px; max-width: 850px; }
+    .badges span { display: inline-block; margin: 6px 6px 0 0; padding: 6px 12px; border-radius: 999px; background: #e0e7ff; color: #3730a3; font-size: 14px; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 22px 0; }
+    .card, .metric { background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 22px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); }
+    .metric strong { color: #312e81; font-size: 26px; display: block; }
+    table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; }
+    th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+    th { background: #eef2ff; }
+    .cta { background: #0f172a; color: white; border-radius: 24px; padding: 28px; margin: 42px 0; }
+    .cta a { color: #bfdbfe; }
+    .note { color: #475569; font-size: 14px; }
+    @media(max-width: 760px) { .grid, .metrics { grid-template-columns: 1fr; } h1 { font-size: 36px; } .hero { padding: 36px 24px; } }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>AI Product Intelligence Suite</h1>
+      <p>Transform complex regulatory and technical information into auditable product decisions, traceable requirements, QA scenarios, release communication and executive-ready briefs.</p>
+      <div class="badges">
+        <span>Compliance-heavy enterprise software</span>
+        <span>AI Product Management</span>
+        <span>RAG + traceability</span>
+        <span>Human-in-the-loop</span>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <div class="metric"><strong>4</strong>Integrated AI workflows</div>
+      <div class="metric"><strong>RAG</strong>Grounded compliance analysis</div>
+      <div class="metric"><strong>CSV</strong>Structured exports</div>
+      <div class="metric"><strong>HITL</strong>Human review by design</div>
+    </section>
+
+    <h2>Why this suite exists</h2>
+    <p>Enterprise teams working with compliance, audit, e-invoicing, tax reporting and complex releases often lose time translating ambiguous source material into implementation-ready product artefacts. The result is slower discovery, inconsistent communication, weak auditability and higher delivery risk.</p>
+
+    <h2>Hero case study — SAF-T PT + EU e-invoicing readiness</h2>
+    <div class="card">
+      <p><b>Context:</b> A synthetic enterprise software company needs to assess a 20-page regulatory guidance document covering SAF-T PT validation, invoice data requirements and EU e-invoicing readiness.</p>
+      <p><b>Output:</b> obligations, traceability matrix, validation rules, QA scenarios, Jira-ready items, customer-safe release notes, risk register and AI safety review.</p>
+      <p><b>Prototype benchmark hypothesis:</b> reduce first-draft compliance/product analysis by 60–80% while preserving human review and source traceability.</p>
+      <p class="note">Benchmark figures are portfolio targets based on synthetic workflows, not independently validated production claims.</p>
+    </div>
+
+    <h2>The four-module system</h2>
+    <section class="grid">
+      <div class="card"><h3>Interpret — Compliance-to-Product Studio</h3><p>Turns regulatory PDFs and guidance documents into obligation extraction, citation-verified requirements, traceability matrices, validation rules, QA scenarios and release notes.</p><p><b>Ideal for:</b> Compliance, Product, Engineering, Audit, Risk.</p></div>
+      <div class="card"><h3>Discover — Product Discovery Studio</h3><p>Turns feature ideas into assumptions, trade-offs, RICE scoring, PM interview questions, Jira tickets, Gherkin acceptance criteria, MVP/V2 scope and quality gates.</p><p><b>Ideal for:</b> Product Managers, Engineering Managers, Product Ops.</p></div>
+      <div class="card"><h3>Communicate — Release Readiness Copilot</h3><p>Creates customer-facing release notes, support notes, FAQs, QA checklists, known limitations, approval workflows and claim-safety rewrites.</p><p><b>Ideal for:</b> Product Marketing, Support, Customer Success, QA.</p></div>
+      <div class="card"><h3>Investigate — Decision Timeline Builder</h3><p>Reconstructs product incidents into timelines, actor maps, decision audit trails, contradiction checks, risk registers and executive one-page briefs.</p><p><b>Ideal for:</b> Product Ops, Engineering, Leadership, Support.</p></div>
+    </section>
+
+    <h2>AI safety layer</h2>
+    <div class="card">
+      <ul>
+        <li>Risk Score per output, including ambiguity and overclaiming risks.</li>
+        <li>Confidence Score for grounded outputs.</li>
+        <li>Human Review Required flags for compliance/legal interpretation.</li>
+        <li>Citation support checking against selected source chunks.</li>
+        <li>Grounding heatmap and source coverage to show what was and was not used.</li>
+        <li>Risky wording classifier for release communication.</li>
+        <li>Audit trail exports for review and replay.</li>
+      </ul>
+    </div>
+
+    <h2>Enterprise roadmap</h2>
+    <table>
+      <tr><th>Level</th><th>Capability</th><th>Why it matters</th></tr>
+      <tr><td>P0</td><td>Public demo with synthetic sample data</td><td>Makes the portfolio visible and recruiter-friendly.</td></tr>
+      <tr><td>P1</td><td>Diff view and grounding heatmap</td><td>Demonstrates responsible AI maturity for compliance workflows.</td></tr>
+      <tr><td>P2</td><td>Simulated Jira, Slack, Git and Confluence parsers</td><td>Shows Series C integration vision.</td></tr>
+      <tr><td>P2</td><td>Observability, versioning and replay mode</td><td>Aligns with enterprise auditability and operations.</td></tr>
+    </table>
+
+    <section class="cta">
+      <h2>Want to see the suite in action?</h2>
+      <p>Contact: <a href="mailto:marco.figueiredo@outlook.com">marco.figueiredo@outlook.com</a></p>
+    </section>
+  <section class="section"><h2>About Marco</h2><p>Marco Figueiredo is an AI Product Manager focused on compliance-heavy enterprise software. He turns complex documents, regulatory ambiguity and critical workflows into clear, auditable and scalable AI-assisted product systems.</p></section></main>
+</body>
+</html>

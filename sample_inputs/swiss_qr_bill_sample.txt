@@ -1,0 +1,23 @@
+Swiss QR-Bill / invoice payment sample input for portfolio validation
+
+Source type: synthetic product/compliance brief based on Swiss QR-bill implementation guidance. This is not legal advice and is included only as a second-domain evaluation case for the portfolio.
+
+S1. A Swiss QR-bill payment part must contain a Swiss QR Code with the payment information required for digital processing. The code is visually identified by the Swiss cross in the centre of the QR code.
+
+S2. If a QR reference is used, the payment data must use a QR-IBAN. A QR reference must not be combined with a regular IBAN.
+
+S3. If an ISO 11649 creditor reference (SCOR) is used, the payment data must use a regular IBAN rather than a QR-IBAN.
+
+S4. If no structured reference is used, the payment data may use a regular IBAN with an unstructured message.
+
+S5. QR-bill payment data may be denominated in CHF or EUR, but the implementation must validate allowed currency/reference/account combinations before rendering the payment part.
+
+S6. The invoice renderer must keep the machine-readable QR payload aligned with the human-readable payment part. Information printed on the payment part should not contradict the QR code payload.
+
+S7. Structured addresses should be captured as explicit fields such as name, street, house number, postal code, town and country code. The implementation should not rely only on one free-text address line when structured address validation is required.
+
+S8. The system must block export when mandatory debtor or creditor address fields are missing for a structured-address QR-bill.
+
+S9. The system should provide a validation report that explains which payment field failed validation and why the QR-bill cannot be generated.
+
+S10. The product must not claim that generating a syntactically valid QR-bill guarantees regulatory or bank acceptance in all cases. Human review and bank/customer-specific validation may still be required.

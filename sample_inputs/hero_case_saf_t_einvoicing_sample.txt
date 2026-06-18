@@ -1,0 +1,15 @@
+Synthetic regulatory-style sample for demo purposes only.
+
+The invoice export must include a customer tax identifier for each taxable transaction. Records without a customer tax identifier should be blocked before export, unless a documented exception applies.
+
+The invoice date must be present and must not be later than the export generation date. If the invoice date is outside the reporting period, the system should raise a validation warning.
+
+Each invoice line must include a VAT code. VAT codes must be mapped to a valid local tax treatment before the SAF-T export is generated.
+
+The invoice total must equal the sum of line net amounts, tax amounts and approved charges. If totals do not reconcile, the export must be blocked.
+
+The system should keep an audit trail of validation results, including the validation rule, record identifier, timestamp and user who generated the export.
+
+For e-invoicing readiness, the system should maintain a structured mapping between invoice source fields, export fields and validation outcomes.
+
+Exceptions should be reviewed by a compliance user before submission. Automated validations should support human review and should not replace formal compliance/legal judgement.

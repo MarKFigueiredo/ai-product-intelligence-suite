@@ -1,0 +1,378 @@
+{
+  "evaluation_type": "second-domain local support benchmark; no LLM generation",
+  "domain": "Swiss QR-Bill / invoice payment compliance",
+  "source_file": "sample_inputs/swiss_qr_bill_sample.txt",
+  "gold_obligations": 10,
+  "strong_support_count": 5,
+  "partial_support_count": 2,
+  "needs_review_count": 3,
+  "support_rate_at_64": 0.7,
+  "strong_support_rate_at_82": 0.5,
+  "limitations": [
+    "Synthetic second-domain document and hand-written obligations.",
+    "Measures textual support in cited sections, not legal correctness.",
+    "Does not prove the citation verifier generalizes to all QR-Bill documents.",
+    "Human review is still required for production compliance interpretation."
+  ],
+  "rows": [
+    {
+      "id": "CH-QR-001",
+      "source": "S1",
+      "obligation": "Payment part must contain a Swiss QR Code with payment information required for digital processing.",
+      "support_score": 83,
+      "status": "Strong support",
+      "components": {
+        "support_score": 83,
+        "token_containment": 1.0,
+        "jaccard": 0.615,
+        "char_ngram": 0.539,
+        "sequence_ratio": 0.662,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "code",
+          "contain",
+          "digital",
+          "part",
+          "payment",
+          "processing",
+          "required",
+          "swiss"
+        ],
+        "source_terms_matched": [
+          "code",
+          "contain",
+          "digital",
+          "part",
+          "payment",
+          "processing",
+          "required",
+          "swiss"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-002",
+      "source": "S2",
+      "obligation": "QR reference must be used with QR-IBAN and must not be combined with regular IBAN.",
+      "support_score": 86,
+      "status": "Strong support",
+      "components": {
+        "support_score": 86,
+        "token_containment": 1.0,
+        "jaccard": 0.833,
+        "char_ngram": 0.477,
+        "sequence_ratio": 0.723,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "combined",
+          "iban",
+          "not",
+          "reference",
+          "regular"
+        ],
+        "source_terms_matched": [
+          "combined",
+          "iban",
+          "not",
+          "reference",
+          "regular"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-003",
+      "source": "S3",
+      "obligation": "SCOR creditor reference must use regular IBAN rather than QR-IBAN.",
+      "support_score": 83,
+      "status": "Strong support",
+      "components": {
+        "support_score": 83,
+        "token_containment": 1.0,
+        "jaccard": 0.7,
+        "char_ngram": 0.449,
+        "sequence_ratio": 0.711,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "creditor",
+          "iban",
+          "rather",
+          "reference",
+          "regular",
+          "scor",
+          "than"
+        ],
+        "source_terms_matched": [
+          "creditor",
+          "iban",
+          "rather",
+          "reference",
+          "regular",
+          "scor",
+          "than"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-004",
+      "source": "S4",
+      "obligation": "No structured reference may use regular IBAN with an unstructured message.",
+      "support_score": 85,
+      "status": "Strong support",
+      "components": {
+        "support_score": 85,
+        "token_containment": 1.0,
+        "jaccard": 0.875,
+        "char_ngram": 0.608,
+        "sequence_ratio": 0.827,
+        "modal_alignment": 0.5,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "iban",
+          "may",
+          "message",
+          "reference",
+          "regular",
+          "structured",
+          "unstructured"
+        ],
+        "source_terms_matched": [
+          "iban",
+          "may",
+          "message",
+          "reference",
+          "regular",
+          "structured",
+          "unstructured"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-005",
+      "source": "S5",
+      "obligation": "Validate allowed currency, reference and account combinations before rendering.",
+      "support_score": 64,
+      "status": "Partial support",
+      "components": {
+        "support_score": 64,
+        "token_containment": 1.0,
+        "jaccard": 0.438,
+        "char_ngram": 0.355,
+        "sequence_ratio": 0.569,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": true,
+        "claim_terms": [
+          "account",
+          "allowed",
+          "combinations",
+          "currency",
+          "reference",
+          "rendering",
+          "validate"
+        ],
+        "source_terms_matched": [
+          "account",
+          "allowed",
+          "combinations",
+          "currency",
+          "reference",
+          "rendering",
+          "validate"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-006",
+      "source": "S6",
+      "obligation": "Printed payment part must not contradict the machine-readable QR payload.",
+      "support_score": 76,
+      "status": "Partial support",
+      "components": {
+        "support_score": 76,
+        "token_containment": 1.0,
+        "jaccard": 0.571,
+        "char_ngram": 0.394,
+        "sequence_ratio": 0.348,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "contradict",
+          "machine",
+          "not",
+          "part",
+          "payload",
+          "payment",
+          "printed",
+          "readable"
+        ],
+        "source_terms_matched": [
+          "contradict",
+          "machine",
+          "not",
+          "part",
+          "payload",
+          "payment",
+          "printed",
+          "readable"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-007",
+      "source": "S7",
+      "obligation": "Structured address data should be captured in explicit fields when structured-address validation is required.",
+      "support_score": 60,
+      "status": "Needs review",
+      "components": {
+        "support_score": 60,
+        "token_containment": 1.0,
+        "jaccard": 0.28,
+        "char_ngram": 0.326,
+        "sequence_ratio": 0.493,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": true,
+        "claim_terms": [
+          "address",
+          "captured",
+          "explicit",
+          "fields",
+          "required",
+          "structured",
+          "validation"
+        ],
+        "source_terms_matched": [
+          "address",
+          "captured",
+          "explicit",
+          "fields",
+          "required",
+          "structured",
+          "validation"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-008",
+      "source": "S8",
+      "obligation": "Block export when mandatory structured debtor or creditor address fields are missing.",
+      "support_score": 89,
+      "status": "Strong support",
+      "components": {
+        "support_score": 89,
+        "token_containment": 1.0,
+        "jaccard": 0.9,
+        "char_ngram": 0.63,
+        "sequence_ratio": 0.712,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "address",
+          "block",
+          "creditor",
+          "debtor",
+          "export",
+          "fields",
+          "mandatory",
+          "missing",
+          "structured"
+        ],
+        "source_terms_matched": [
+          "address",
+          "block",
+          "creditor",
+          "debtor",
+          "export",
+          "fields",
+          "mandatory",
+          "missing",
+          "structured"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-009",
+      "source": "S9",
+      "obligation": "Provide a validation report explaining failed payment fields and reasons.",
+      "support_score": 57,
+      "status": "Needs review",
+      "components": {
+        "support_score": 57,
+        "token_containment": 0.625,
+        "jaccard": 0.385,
+        "char_ngram": 0.336,
+        "sequence_ratio": 0.559,
+        "modal_alignment": 1.0,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "explaining",
+          "failed",
+          "fields",
+          "payment",
+          "provide",
+          "reasons",
+          "report",
+          "validation"
+        ],
+        "source_terms_matched": [
+          "failed",
+          "payment",
+          "provide",
+          "report",
+          "validation"
+        ]
+      }
+    },
+    {
+      "id": "CH-QR-010",
+      "source": "S10",
+      "obligation": "Do not claim syntactic QR-bill validity guarantees regulatory or bank acceptance in all cases.",
+      "support_score": 57,
+      "status": "Needs review",
+      "components": {
+        "support_score": 57,
+        "token_containment": 0.818,
+        "jaccard": 0.409,
+        "char_ngram": 0.367,
+        "sequence_ratio": 0.115,
+        "modal_alignment": 0.5,
+        "missing_numbers": [],
+        "negation_mismatch": false,
+        "claim_terms": [
+          "acceptance",
+          "all",
+          "bank",
+          "bill",
+          "cases",
+          "claim",
+          "guarantees",
+          "not",
+          "regulatory",
+          "syntactic",
+          "validity"
+        ],
+        "source_terms_matched": [
+          "acceptance",
+          "all",
+          "bank",
+          "bill",
+          "cases",
+          "claim",
+          "guarantees",
+          "not",
+          "regulatory"
+        ]
+      }
+    }
+  ]
+}

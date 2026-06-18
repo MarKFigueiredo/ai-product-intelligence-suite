@@ -1,0 +1,13 @@
+{
+  "obligation_extraction": [
+    {"obligation_id": "O1", "obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.", "source": "[S1]"},
+    {"obligation_id": "O2", "obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.", "source": "[S1]"},
+    {"obligation_id": "O3", "obligation": "Invoices in a Portuguese SAF-T export must include the tax code.", "source": "[S1]"},
+    {"obligation_id": "O4", "obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.", "source": "[S1]"},
+    {"obligation_id": "O5", "obligation": "Customer account reference must be included where applicable.", "source": "[S1]"},
+    {"obligation_id": "O6", "obligation": "Records with missing tax identifiers should be corrected before export.", "source": "[S1]"},
+    {"obligation_id": "O7", "obligation": "Records with inconsistent totals should be corrected before export.", "source": "[S1]"},
+    {"obligation_id": "O8", "obligation": "The product should maintain validation evidence to support user review and audit checks.", "source": "[S1]"},
+    {"obligation_id": "O9", "obligation": "The system guarantees full legal compliance automatically after export.", "source": "[S1]"}
+  ]
+}

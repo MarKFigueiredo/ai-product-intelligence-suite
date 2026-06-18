@@ -1,0 +1,62 @@
+{
+  "method_note": "Citation support, unsupported-claim and human-review rates are calculated from the actual current run. Obligation precision and recall are calculated only when you provide an independent gold-standard obligations file for the same document. These are deterministic support metrics, not model self-scores and not legal/compliance proof.",
+  "metrics": [
+    {
+      "metric": "Obligation precision",
+      "value": "89%",
+      "fraction": "8/9",
+      "status": "Strong",
+      "evidence_basis": "Run-specific gold set",
+      "method": "Calculated only when a run-specific gold-standard obligations file is provided.",
+      "limitation": "Not available without independent gold obligations for the same document. A weak gold set creates weak metrics."
+    },
+    {
+      "metric": "Obligation recall",
+      "value": "80%",
+      "fraction": "8/10",
+      "status": "Strong",
+      "evidence_basis": "Run-specific gold set",
+      "method": "Gold-centric matching against the run-specific gold set.",
+      "limitation": "Requires independent human gold obligations. Not calculated from the model output alone."
+    },
+    {
+      "metric": "Citation support rate",
+      "value": "89%",
+      "fraction": "8/9",
+      "status": "Strong",
+      "evidence_basis": "Actual current run",
+      "method": "Rule-based citation support check using quote integrity, token overlap, n-grams, numbers and modality/negation checks.",
+      "limitation": "Textual support is not legal interpretation; human review remains required."
+    },
+    {
+      "metric": "Unsupported claim rate",
+      "value": "11%",
+      "fraction": "1/9",
+      "status": "Monitor",
+      "evidence_basis": "Actual current run",
+      "method": "Rule-based weak support detection against the cited source chunks used in the run.",
+      "limitation": "A low rate is encouraging but does not guarantee correctness."
+    },
+    {
+      "metric": "Human review rate",
+      "value": "11%",
+      "fraction": "1/9",
+      "status": "Monitor",
+      "evidence_basis": "Actual current run",
+      "method": "Deterministic review flags from weak support, missing quotes, number mismatches and modality/negation issues.",
+      "limitation": "A high rate can be positive in regulated workflows because it surfaces uncertainty instead of hiding it."
+    }
+  ],
+  "citation_counts": {
+    "checked_claims": 9,
+    "supported_claims": 8,
+    "partial_claims": 0,
+    "unsupported_claims": 1,
+    "human_review_claims": 1
+  },
+  "thresholds": {
+    "obligation_match_threshold": 58,
+    "citation_support_threshold": 64,
+    "unsupported_threshold": 42
+  }
+}

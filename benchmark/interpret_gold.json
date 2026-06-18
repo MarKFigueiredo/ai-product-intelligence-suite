@@ -1,0 +1,14 @@
+{
+  "document_name": "synthetic_saf_t_einvoicing_guidance.txt",
+  "document_text": "Invoices included in a Portuguese SAF-T export must include the customer tax identification number, invoice date, tax code, invoice total and customer account reference where applicable. Records with missing tax identifiers or inconsistent totals should be corrected before export. The product should maintain validation evidence to support user review and audit checks. Electronic invoicing readiness requires structured invoice identifiers, issue date, buyer and seller tax identifiers, tax category, tax amount and gross total. When fields are not available, the system should flag the record for human review rather than inventing values. Release communications must avoid claiming full legal compliance and should describe the validation checks as decision-support tooling.",
+  "questions": [
+    {"id": "Q1", "query": "What customer identifier is required for SAF-T invoice exports?", "expected_terms": ["customer tax identification number", "tax identifiers"]},
+    {"id": "Q2", "query": "When should missing tax identifiers be corrected?", "expected_terms": ["before export"]},
+    {"id": "Q3", "query": "Which totals need validation?", "expected_terms": ["invoice total", "gross total", "inconsistent totals"]},
+    {"id": "Q4", "query": "What should happen when fields are unavailable?", "expected_terms": ["human review", "rather than inventing values"]},
+    {"id": "Q5", "query": "What evidence should the product maintain?", "expected_terms": ["validation evidence", "audit checks"]},
+    {"id": "Q6", "query": "What wording should release communications avoid?", "expected_terms": ["full legal compliance", "avoid claiming"]},
+    {"id": "Q7", "query": "What e-invoicing fields are mentioned?", "expected_terms": ["structured invoice identifiers", "issue date", "buyer and seller tax identifiers"]},
+    {"id": "Q8", "query": "How should validation checks be described?", "expected_terms": ["decision-support tooling"]}
+  ]
+}

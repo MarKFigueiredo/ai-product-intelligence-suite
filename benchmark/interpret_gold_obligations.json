@@ -1,0 +1,67 @@
+{
+  "name": "SAF-T / e-invoicing synthetic compliance gold obligations",
+  "purpose": "Hand-written synthetic benchmark for the Interpret module. It measures obligation extraction against expected product obligations. It is not a legal benchmark.",
+  "document_text": "Invoices included in a Portuguese SAF-T export must include the customer tax identification number, invoice date, tax code, invoice total and customer account reference where applicable. Records with missing tax identifiers or inconsistent totals should be corrected before export. The product should maintain sufficient validation evidence to support user review and audit checks. Export reports must show which invoice records failed validation and why.",
+  "gold_obligations": [
+    {
+      "id": "G1",
+      "obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.",
+      "required_terms": ["customer", "tax", "identification", "number", "SAF-T", "export"],
+      "source_quote": "must include the customer tax identification number"
+    },
+    {
+      "id": "G2",
+      "obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "required_terms": ["invoice", "date", "SAF-T", "export"],
+      "source_quote": "invoice date"
+    },
+    {
+      "id": "G3",
+      "obligation": "Invoices in a Portuguese SAF-T export must include the tax code.",
+      "required_terms": ["tax", "code", "SAF-T", "export"],
+      "source_quote": "tax code"
+    },
+    {
+      "id": "G4",
+      "obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.",
+      "required_terms": ["invoice", "total", "SAF-T", "export"],
+      "source_quote": "invoice total"
+    },
+    {
+      "id": "G5",
+      "obligation": "Customer account reference must be included where applicable.",
+      "required_terms": ["customer", "account", "reference", "where", "applicable"],
+      "source_quote": "customer account reference where applicable"
+    },
+    {
+      "id": "G6",
+      "obligation": "Records with missing tax identifiers should be corrected before export.",
+      "required_terms": ["missing", "tax", "identifiers", "corrected", "before", "export"],
+      "source_quote": "Records with missing tax identifiers or inconsistent totals should be corrected before export."
+    },
+    {
+      "id": "G7",
+      "obligation": "Records with inconsistent totals should be corrected before export.",
+      "required_terms": ["inconsistent", "totals", "corrected", "before", "export"],
+      "source_quote": "Records with missing tax identifiers or inconsistent totals should be corrected before export."
+    },
+    {
+      "id": "G8",
+      "obligation": "The product should maintain validation evidence to support user review and audit checks.",
+      "required_terms": ["validation", "evidence", "user", "review", "audit", "checks"],
+      "source_quote": "maintain sufficient validation evidence to support user review and audit checks"
+    },
+    {
+      "id": "G9",
+      "obligation": "Export reports must show which invoice records failed validation.",
+      "required_terms": ["export", "reports", "invoice", "records", "failed", "validation"],
+      "source_quote": "Export reports must show which invoice records failed validation and why."
+    },
+    {
+      "id": "G10",
+      "obligation": "Export reports must show why invoice records failed validation.",
+      "required_terms": ["export", "reports", "why", "failed", "validation"],
+      "source_quote": "Export reports must show which invoice records failed validation and why."
+    }
+  ]
+}

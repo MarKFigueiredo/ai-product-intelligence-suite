@@ -1,0 +1,200 @@
+{
+  "benchmark_name": "Swiss QR-Bill synthetic generalization gold obligations",
+  "threshold": 58,
+  "generated_count": 12,
+  "gold_count": 11,
+  "precision_proxy": 92,
+  "recall_proxy": 100,
+  "f1_proxy": 96,
+  "matched_gold_count": 11,
+  "method_note": "Rule-based proxy benchmark against a hand-written synthetic gold set. A generated obligation may match multiple granular gold obligations. Not a production compliance evaluation.",
+  "match_matrix": [
+    {
+      "gold_id": "QRB-G1",
+      "gold_obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "best_generated_id": "QRB-O1",
+      "best_generated_obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G2",
+      "gold_obligation": "The Swiss QR Code must contain payment information needed for invoicing and payment.",
+      "best_generated_id": "QRB-O2",
+      "best_generated_obligation": "The Swiss QR Code must contain payment information needed for invoicing and payment.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G3",
+      "gold_obligation": "Visible payment information must be available in plain text so the recipient can check it before approval.",
+      "best_generated_id": "QRB-O3",
+      "best_generated_obligation": "Visible payment information must be available in plain text so the recipient can check it before approval.",
+      "match_score": 87,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G4",
+      "gold_obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "best_generated_id": "QRB-O4",
+      "best_generated_obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G5",
+      "gold_obligation": "A QR-IBAN can only be used for invoicing and payments in CHF in this QR-bill context.",
+      "best_generated_id": "QRB-O5",
+      "best_generated_obligation": "A QR-IBAN can only be used for invoicing and payments in CHF in this QR-bill context.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G6",
+      "gold_obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "best_generated_id": "QRB-O6",
+      "best_generated_obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G7",
+      "gold_obligation": "The QR reference must not consist exclusively of zeros.",
+      "best_generated_id": "QRB-O7",
+      "best_generated_obligation": "The QR reference must not consist exclusively of zeros.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G8",
+      "gold_obligation": "A QR reference can only be used in combination with a QR-IBAN.",
+      "best_generated_id": "QRB-O8",
+      "best_generated_obligation": "A QR reference can only be used in combination with a QR-IBAN.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G9",
+      "gold_obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "best_generated_id": "QRB-O9",
+      "best_generated_obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G10",
+      "gold_obligation": "QR-bills must use structured address elements in the Swiss QR Code under the November 2025 requirements.",
+      "best_generated_id": "QRB-O10",
+      "best_generated_obligation": "QR-bills must use structured address elements in the Swiss QR Code under the November 2025 requirements.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "QRB-G11",
+      "gold_obligation": "Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.",
+      "best_generated_id": "QRB-O11",
+      "best_generated_obligation": "Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.",
+      "match_score": 91,
+      "status": "Matched"
+    }
+  ],
+  "generated_matrix": [
+    {
+      "generated_id": "QRB-O1",
+      "generated_obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "best_gold_id": "QRB-G1",
+      "best_gold_obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O2",
+      "generated_obligation": "The Swiss QR Code must contain payment information needed for invoicing and payment.",
+      "best_gold_id": "QRB-G2",
+      "best_gold_obligation": "The Swiss QR Code must contain payment information needed for invoicing and payment.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O3",
+      "generated_obligation": "Visible payment information must be available in plain text so the recipient can check it before approval.",
+      "best_gold_id": "QRB-G3",
+      "best_gold_obligation": "Visible payment information must be available in plain text so the recipient can check it before approval.",
+      "match_score": 87,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O4",
+      "generated_obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "best_gold_id": "QRB-G4",
+      "best_gold_obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O5",
+      "generated_obligation": "A QR-IBAN can only be used for invoicing and payments in CHF in this QR-bill context.",
+      "best_gold_id": "QRB-G5",
+      "best_gold_obligation": "A QR-IBAN can only be used for invoicing and payments in CHF in this QR-bill context.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O6",
+      "generated_obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "best_gold_id": "QRB-G6",
+      "best_gold_obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O7",
+      "generated_obligation": "The QR reference must not consist exclusively of zeros.",
+      "best_gold_id": "QRB-G7",
+      "best_gold_obligation": "The QR reference must not consist exclusively of zeros.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O8",
+      "generated_obligation": "A QR reference can only be used in combination with a QR-IBAN.",
+      "best_gold_id": "QRB-G8",
+      "best_gold_obligation": "A QR reference can only be used in combination with a QR-IBAN.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O9",
+      "generated_obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "best_gold_id": "QRB-G9",
+      "best_gold_obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O10",
+      "generated_obligation": "QR-bills must use structured address elements in the Swiss QR Code under the November 2025 requirements.",
+      "best_gold_id": "QRB-G10",
+      "best_gold_obligation": "QR-bills must use structured address elements in the Swiss QR Code under the November 2025 requirements.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-O11",
+      "generated_obligation": "Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.",
+      "best_gold_id": "QRB-G11",
+      "best_gold_obligation": "Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.",
+      "match_score": 91,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "QRB-OX",
+      "generated_obligation": "The product guarantees every QR-bill will be accepted by all banks automatically.",
+      "best_gold_id": "QRB-G1",
+      "best_gold_obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "match_score": 19,
+      "status": "No strong gold match"
+    }
+  ],
+  "missing_gold_obligations": []
+}

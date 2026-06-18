@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <rect x="70" y="55" width="1140" height="610" rx="28" fill="#ffffff" stroke="#dbeafe"/>
+  <text x="105" y="115" font-family="Arial" font-size="38" font-weight="700" fill="#0f172a">Guided Portfolio Demo — Visual Timeline</text>
+  <text x="105" y="153" font-family="Arial" font-size="20" fill="#475569">source → obligation → review → QA → safer release → audit evidence</text>
+  <line x1="165" y1="215" x2="165" y2="590" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+  <g font-family="Arial">
+    <circle cx="165" cy="230" r="12" fill="#2563eb"/><rect x="205" y="205" width="850" height="58" rx="14" fill="#eff6ff"/><text x="225" y="240" font-size="20" font-weight="700" fill="#1e3a8a">09:10 Source imported with document hash</text>
+    <circle cx="165" cy="305" r="12" fill="#2563eb"/><rect x="205" y="280" width="850" height="58" rx="14" fill="#f8fafc" stroke="#e2e8f0"/><text x="225" y="315" font-size="20" font-weight="700" fill="#0f172a">09:12 Obligations extracted and mapped to IDs</text>
+    <circle cx="165" cy="380" r="12" fill="#f59e0b"/><rect x="205" y="355" width="850" height="58" rx="14" fill="#fffbeb" stroke="#fde68a"/><text x="225" y="390" font-size="20" font-weight="700" fill="#92400e">09:18 Reviewer correction changes downstream requirement</text>
+    <circle cx="165" cy="455" r="12" fill="#10b981"/><rect x="205" y="430" width="850" height="58" rx="14" fill="#ecfdf5" stroke="#bbf7d0"/><text x="225" y="465" font-size="20" font-weight="700" fill="#166534">09:23 Negative QA coverage passes release gate</text>
+    <circle cx="165" cy="530" r="12" fill="#7c3aed"/><rect x="205" y="505" width="850" height="58" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/><text x="225" y="540" font-size="20" font-weight="700" fill="#5b21b6">09:30 Audit-ready report exported with evidence summary</text>
+  </g>
+</svg>

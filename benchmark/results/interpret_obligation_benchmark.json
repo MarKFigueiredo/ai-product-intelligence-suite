@@ -1,0 +1,177 @@
+{
+  "benchmark_name": "SAF-T / e-invoicing synthetic compliance gold obligations",
+  "threshold": 58,
+  "generated_count": 9,
+  "gold_count": 10,
+  "precision_proxy": 89,
+  "recall_proxy": 80,
+  "f1_proxy": 84,
+  "matched_gold_count": 8,
+  "method_note": "Rule-based proxy benchmark against a hand-written synthetic gold set. A generated obligation may match multiple granular gold obligations. Not a production compliance evaluation.",
+  "match_matrix": [
+    {
+      "gold_id": "G1",
+      "gold_obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.",
+      "best_generated_id": "O1",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G2",
+      "gold_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "best_generated_id": "O2",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G3",
+      "gold_obligation": "Invoices in a Portuguese SAF-T export must include the tax code.",
+      "best_generated_id": "O3",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the tax code.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G4",
+      "gold_obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.",
+      "best_generated_id": "O4",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G5",
+      "gold_obligation": "Customer account reference must be included where applicable.",
+      "best_generated_id": "O5",
+      "best_generated_obligation": "Customer account reference must be included where applicable.",
+      "match_score": 96,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G6",
+      "gold_obligation": "Records with missing tax identifiers should be corrected before export.",
+      "best_generated_id": "O6",
+      "best_generated_obligation": "Records with missing tax identifiers should be corrected before export.",
+      "match_score": 97,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G7",
+      "gold_obligation": "Records with inconsistent totals should be corrected before export.",
+      "best_generated_id": "O7",
+      "best_generated_obligation": "Records with inconsistent totals should be corrected before export.",
+      "match_score": 97,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G8",
+      "gold_obligation": "The product should maintain validation evidence to support user review and audit checks.",
+      "best_generated_id": "O8",
+      "best_generated_obligation": "The product should maintain validation evidence to support user review and audit checks.",
+      "match_score": 95,
+      "status": "Matched"
+    },
+    {
+      "gold_id": "G9",
+      "gold_obligation": "Export reports must show which invoice records failed validation.",
+      "best_generated_id": "O2",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "match_score": 34,
+      "status": "Missing / weak match"
+    },
+    {
+      "gold_id": "G10",
+      "gold_obligation": "Export reports must show why invoice records failed validation.",
+      "best_generated_id": "O2",
+      "best_generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "match_score": 30,
+      "status": "Missing / weak match"
+    }
+  ],
+  "generated_matrix": [
+    {
+      "generated_id": "O1",
+      "generated_obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.",
+      "best_gold_id": "G1",
+      "best_gold_obligation": "Invoices in a Portuguese SAF-T export must include the customer tax identification number.",
+      "match_score": 94,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O2",
+      "generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "best_gold_id": "G2",
+      "best_gold_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "match_score": 93,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O3",
+      "generated_obligation": "Invoices in a Portuguese SAF-T export must include the tax code.",
+      "best_gold_id": "G3",
+      "best_gold_obligation": "Invoices in a Portuguese SAF-T export must include the tax code.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O4",
+      "generated_obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.",
+      "best_gold_id": "G4",
+      "best_gold_obligation": "Invoices in a Portuguese SAF-T export must include the invoice total.",
+      "match_score": 92,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O5",
+      "generated_obligation": "Customer account reference must be included where applicable.",
+      "best_gold_id": "G5",
+      "best_gold_obligation": "Customer account reference must be included where applicable.",
+      "match_score": 96,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O6",
+      "generated_obligation": "Records with missing tax identifiers should be corrected before export.",
+      "best_gold_id": "G6",
+      "best_gold_obligation": "Records with missing tax identifiers should be corrected before export.",
+      "match_score": 97,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O7",
+      "generated_obligation": "Records with inconsistent totals should be corrected before export.",
+      "best_gold_id": "G7",
+      "best_gold_obligation": "Records with inconsistent totals should be corrected before export.",
+      "match_score": 97,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O8",
+      "generated_obligation": "The product should maintain validation evidence to support user review and audit checks.",
+      "best_gold_id": "G8",
+      "best_gold_obligation": "The product should maintain validation evidence to support user review and audit checks.",
+      "match_score": 95,
+      "status": "Matched"
+    },
+    {
+      "generated_id": "O9",
+      "generated_obligation": "The system guarantees full legal compliance automatically after export.",
+      "best_gold_id": "G2",
+      "best_gold_obligation": "Invoices in a Portuguese SAF-T export must include the invoice date.",
+      "match_score": 21,
+      "status": "No strong gold match"
+    }
+  ],
+  "missing_gold_obligations": [
+    {
+      "gold_id": "G9",
+      "gold_obligation": "Export reports must show which invoice records failed validation."
+    },
+    {
+      "gold_id": "G10",
+      "gold_obligation": "Export reports must show why invoice records failed validation."
+    }
+  ]
+}

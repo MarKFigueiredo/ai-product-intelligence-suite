@@ -1,0 +1,1 @@
+Invoices included in a Portuguese SAF-T export must include the customer tax identification number, invoice date, tax code, invoice total and customer account reference where applicable. Records with missing tax identifiers or inconsistent totals should be corrected before export. The product should maintain sufficient validation evidence to support user review and audit checks.

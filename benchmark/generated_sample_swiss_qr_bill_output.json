@@ -1,0 +1,106 @@
+{
+  "obligation_extraction": [
+    {
+      "obligation_id": "QRB-O1",
+      "obligation": "A Swiss QR-bill must include both a receipt and a payment section.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O2",
+      "obligation": "The Swiss QR Code must contain payment information needed for invoicing and payment.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O3",
+      "obligation": "Visible payment information must be available in plain text so the recipient can check it before approval.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O4",
+      "obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O5",
+      "obligation": "A QR-IBAN can only be used for invoicing and payments in CHF in this QR-bill context.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O6",
+      "obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O7",
+      "obligation": "The QR reference must not consist exclusively of zeros.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O8",
+      "obligation": "A QR reference can only be used in combination with a QR-IBAN.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O9",
+      "obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O10",
+      "obligation": "QR-bills must use structured address elements in the Swiss QR Code under the November 2025 requirements.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-O11",
+      "obligation": "Faulty Swiss QR Code printing can disrupt processing and payment parts can be rejected.",
+      "source": "[S1]"
+    },
+    {
+      "obligation_id": "QRB-OX",
+      "obligation": "The product guarantees every QR-bill will be accepted by all banks automatically.",
+      "source": "[S6]"
+    }
+  ],
+  "traceability_matrix": [
+    {
+      "obligation_id": "QRB-O4",
+      "obligation": "For payments with a structured QR reference, the credited account must be a QR-IBAN.",
+      "validation_rule": "Block QR reference with standard IBAN; require QR-IBAN when structured QR reference is used.",
+      "source": "[S2]"
+    },
+    {
+      "obligation_id": "QRB-O6",
+      "obligation": "The QR reference must have 26 numerical characters followed by a modulo 10 recursive check digit.",
+      "validation_rule": "Validate 26 numeric characters plus checksum placeholder before export.",
+      "source": "[S3]"
+    },
+    {
+      "obligation_id": "QRB-O9",
+      "obligation": "A Creditor Reference can only be used with an IBAN for invoicing in CHF or EUR.",
+      "validation_rule": "Block Creditor Reference when no standard IBAN is provided; permit CHF/EUR only.",
+      "source": "[S4]"
+    }
+  ],
+  "qa_test_cases": [
+    {
+      "test_id": "QRB-QA1",
+      "scenario": "Negative: reject QR reference used with a standard IBAN instead of QR-IBAN.",
+      "source": "[S2]"
+    },
+    {
+      "test_id": "QRB-QA2",
+      "scenario": "Negative: reject QR reference with all zeros or wrong length/check digit.",
+      "source": "[S3]"
+    },
+    {
+      "test_id": "QRB-QA3",
+      "scenario": "Negative: reject Creditor Reference not starting with RF or used without IBAN.",
+      "source": "[S4]"
+    },
+    {
+      "test_id": "QRB-QA4",
+      "scenario": "Negative: warn when PDF-to-paper processing requirements are not documented.",
+      "source": "[S6]"
+    }
+  ]
+}

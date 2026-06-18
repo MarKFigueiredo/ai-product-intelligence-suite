@@ -1,0 +1,71 @@
+{
+  "case_name": "SAF-T PT / E-invoicing Compliance-to-Product Traceability",
+  "scope_note": "Synthetic realistic portfolio case, not legal or tax guidance.",
+  "input_document_excerpt": "For Portuguese SAF-T invoice exports, the application must validate that each exported sales invoice contains a customer tax identification number, invoice date, tax code, invoice total and customer account reference where applicable. When the product is configured for accounting or integrated accounting with billing, exported invoice records must be traceable to the originating accounting journal transaction. The exported transaction reference must preserve the journal identifier, transaction date and archival/document number used by the accounting subsystem. Records with missing customer tax identifiers, invalid tax codes, inconsistent invoice totals or missing accounting traceability for applicable configurations must be flagged before export. Critical validation failures must prevent final export until corrected or explicitly reviewed by an authorised compliance reviewer. The export validation report must show every failed invoice record, the failed field, severity, reason, owner and correction status. The system must maintain validation evidence, reviewer decisions, document version hash and export/report timestamp so Product, QA and Compliance can reconstruct what was checked and why. Customer-facing release communication must not state that the product guarantees legal compliance.",
+  "obligations": [
+    {
+      "id": "O-SAF-T-001",
+      "obligation": "Validate customer tax ID, invoice date, tax code, invoice total and AccountID where applicable before export.",
+      "review_status": "Correct"
+    },
+    {
+      "id": "O-SAF-T-002",
+      "obligation": "For accounting/integrated modes, preserve accounting journal traceability from invoice to transaction.",
+      "review_status": "Needs review"
+    },
+    {
+      "id": "O-SAF-T-003",
+      "obligation": "Flag missing tax ID, invalid tax code, inconsistent totals and missing accounting traceability before export.",
+      "review_status": "Correct"
+    },
+    {
+      "id": "O-SAF-T-004",
+      "obligation": "Critical validation failures must prevent final export unless corrected or authorised reviewer override exists.",
+      "review_status": "Correct"
+    },
+    {
+      "id": "O-SAF-T-009",
+      "obligation": "Store source document text indefinitely for audit.",
+      "review_status": "Incorrect"
+    }
+  ],
+  "before_requirement": "The system should validate SAF-T invoice data before export.",
+  "after_requirement": "The system must validate sales invoice records before SAF-T export for customer tax identification number, invoice date, tax code, invoice total and customer account reference where applicable. For accounting or integrated accounting with billing configurations, the system must preserve traceability to the originating journal transaction using journal identifier, transaction date and archival/document number. Critical validation failures must prevent final export until corrected or explicitly reviewed by an authorised Compliance Reviewer.",
+  "jira_story_summary": "Validate SAF-T invoice fields and accounting traceability before export",
+  "qa_case": "Missing customer tax ID blocks export and appears in validation report.",
+  "risky_release_note": "This release guarantees SAF-T compliance for Portuguese invoice exports and automatically prevents all incorrect filings.",
+  "safer_release_note": "This release adds pre-export validation checks for Portuguese SAF-T invoice exports. The feature helps users identify missing customer tax identifiers, inconsistent totals and applicable accounting traceability gaps before export. Final compliance review and submission responsibility remain with the customer.",
+  "incident_if_missed": "Customer cannot reconcile several exported invoice records to accounting journal transactions after relying on unsafe release wording.",
+  "synthetic_metrics": {
+    "time_to_first_requirement_set": "45 min manual -> 8 min assisted",
+    "unsupported_claim_rate": "22% initial -> 6% after reviewer pass",
+    "qa_coverage": "60% initial -> 90% after obligation-to-QA mapping",
+    "reviewer_correction_rate": "40% of generated obligations required comment or correction",
+    "missing_obligation_recall": "80% on synthetic gold set",
+    "release_risk_reduction": "4 high-risk claims rewritten",
+    "negative_test_coverage": "0% happy-path only -> 100% after obligation-linked negative test gate"
+  },
+  "negative_test_coverage_policy": "Every extracted obligation that reaches product/Jira/QA handoff must have at least one mapped negative/edge/failure QA case before release-ready status.",
+  "negative_test_coverage_examples": [
+    {
+      "obligation_id": "O-SAF-T-001",
+      "negative_test": "Invoice missing CustomerTaxID is blocked before export",
+      "evidence_required": "Seeded regression test"
+    },
+    {
+      "obligation_id": "O-SAF-T-002",
+      "negative_test": "Integrated accounting export missing JournalID/TransactionDate/DocArchivalNumber is blocked",
+      "evidence_required": "Automated validation test"
+    },
+    {
+      "obligation_id": "O-SAF-T-003",
+      "negative_test": "Inconsistent invoice total is rejected or flagged before export",
+      "evidence_required": "Report metadata test"
+    },
+    {
+      "obligation_id": "O-SAF-T-004",
+      "negative_test": "Critical validation failure cannot be exported without authorized reviewer override",
+      "evidence_required": "Report schema test"
+    }
+  ]
+}
