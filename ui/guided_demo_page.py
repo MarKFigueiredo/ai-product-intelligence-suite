@@ -42,8 +42,8 @@ def render_guided_demo_page(settings: Dict[str, Any]) -> None:
     gate = release_gate_dashboard(output)
 
     render_page_intro(
-        "Guided Portfolio Demo",
-        "A 90-second review path for the SAF-T/e-invoicing hero workflow: source → obligation → review → requirement → QA → safer release communication → audit evidence.",
+        "Start Here — Hero Demo",
+        "A 60–90 second first-click path for the SAF-T/e-invoicing hero workflow: source → obligation → review → requirement → QA → safer release communication → audit evidence.",
         ["portfolio case study", "human-reviewed", "audit-aware"],
     )
 
@@ -176,7 +176,7 @@ def render_guided_demo_page(settings: Dict[str, Any]) -> None:
             st.dataframe(pd.DataFrame(comparison["comparison"]), width="stretch", hide_index=True)
         if st.button("Record this guided demo as a real local usage run"):
             record = record_output_run(
-                workflow="Guided Portfolio Demo",
+                workflow="Start Here — Hero Demo",
                 settings=settings,
                 input_payload={"hero_case_hash": output.get("input_document_hash")},
                 output_payload=output,
@@ -191,7 +191,7 @@ def render_guided_demo_page(settings: Dict[str, Any]) -> None:
         st.dataframe(pd.DataFrame(SKILL_EVIDENCE), width="stretch", hide_index=True)
         if st.button("Export hero demo package locally"):
             path = save_export_package_locally(
-                workflow="Guided Portfolio Demo",
+                workflow="Start Here — Hero Demo",
                 title="hero_demo_portfolio_package",
                 payload={"hero_output": output, "release_gate": gate, "skill_evidence": SKILL_EVIDENCE},
                 actor=settings.get("demo_user", "demo-user"),

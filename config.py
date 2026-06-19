@@ -34,7 +34,7 @@ LANGUAGES = [
 DETAIL_LEVELS = ["Concise", "Standard", "Detailed"]
 
 WORKFLOWS = {
-    "Guided Demo — Portfolio Review": "guided_demo",
+    "Start Here — Hero Demo": "guided_demo",
     "Landing — Public Portfolio Page": "landing_page",
     "About — Marco Figueiredo": "about_me",
     "Discover — Product Discovery Studio": "product_discovery",
@@ -56,7 +56,7 @@ WORKFLOWS = {
 # The full app deliberately keeps every artifact available, but the sidebar defaults to
 # a focused review path so hiring reviewers are not overwhelmed by every deep-dive tab.
 CORE_REVIEW_WORKFLOWS = {
-    "Guided Demo — Portfolio Review": "guided_demo",
+    "Start Here — Hero Demo": "guided_demo",
     "Interpret — Compliance-to-Product Studio": "compliance_studio",
     "Discover — Product Discovery Studio": "product_discovery",
     "Communicate — Release Readiness Copilot": "release_readiness",

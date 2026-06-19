@@ -8,6 +8,8 @@
 
 This project is a portfolio case study, not a commercial product.
 
+In 60 seconds, this app shows how a regulated product team can convert ambiguous compliance input into reviewed requirements, QA coverage and safer release communication.
+
 It demonstrates how I design AI product workflows for regulated enterprise software:
 
 1. domain understanding;
@@ -39,6 +41,14 @@ It is intentionally human-in-the-loop. The goal is not to automate compliance de
 - Not legal, tax, financial or regulatory advice.
 - Not a replacement for compliance, legal, QA or product approval.
 - Not a claim of enterprise deployment completeness.
+
+## Visual walkthrough
+
+| Start here / Hero Demo | Hero workflow output | QA, release and audit |
+|---|---|---|
+| ![Start Here Hero Demo](assets/screenshots/01_hero_demo_start_here.png) | ![Hero workflow output](assets/screenshots/02_hero_workflow_output.png) | ![QA release audit evidence](assets/screenshots/03_qa_release_audit.png) |
+
+These screenshots show the intended first-click path: start with the hero demo, inspect the compliance-to-product output, then review QA, release-risk and audit evidence.
 
 ## 5-minute review path
 
