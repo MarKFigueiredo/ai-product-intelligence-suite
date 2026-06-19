@@ -83,7 +83,8 @@ If you are reviewing this project for hiring:
 - [`DEMO_WALKTHROUGH_FOR_HIRING.md`](DEMO_WALKTHROUGH_FOR_HIRING.md) — 90-second demo walkthrough.
 - [`PRODUCT_STRATEGY.md`](PRODUCT_STRATEGY.md) — ICP, personas, wedge, roadmap and metrics.
 - [`VALIDATION_LIMITATIONS.md`](VALIDATION_LIMITATIONS.md) — what is validated, synthetic, local or not production-ready.
-- [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md) — system architecture, workflow and real-vs-simulated explanation.
+- [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md)
+- [`docs/UI_UX_REVIEW.md`](docs/UI_UX_REVIEW.md) — system architecture, workflow and real-vs-simulated explanation.
 
 ## Key product capabilities
 

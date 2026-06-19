@@ -2,7 +2,7 @@
 
 This repository intentionally contains more than one module because the case study demonstrates a cross-functional AI product workflow: compliance interpretation, product discovery, QA coverage, release communication, incident learning, enterprise controls and metrics.
 
-The risk is obvious: too many tabs can make the portfolio feel unfocused. v23 introduced focused navigation, and v24 makes the scope decision explicit. It addresses that risk by separating the project into two review modes.
+The risk is obvious: too many tabs can make the portfolio feel unfocused. v23 introduced focused navigation, and v1.04 makes the scope decision explicit. It addresses that risk by separating the project into two review modes.
 
 ## Focused review path
 
@@ -53,7 +53,7 @@ I intentionally did not build:
 
 Reason: these would make the repository look broader, but they would not materially improve the hiring signal for AI product judgment. For a portfolio prototype, the better signal is to show local evidence of the right product concerns — hashes, audit events, import/export, connector outbox, approval states, claim hygiene and quality gates — while clearly stating what production would require.
 
-## What I stopped adding after v23
+## What I stopped adding after v1.04
 
 The next step is not another enterprise module. v24 focuses on validation and generalization:
 

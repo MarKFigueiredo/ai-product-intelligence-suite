@@ -59,6 +59,6 @@ Obligation precision and recall require an independent gold-standard obligation 
 The citation-related metrics are run-specific, but still rule-based. They should be used as review signals, not compliance proof.
 
 
-## v17 failure-mode framing
+## v1.01 failure-mode framing
 
 See `docs/ERROR_TAXONOMY_FAILURE_MODES.md` for the formal error taxonomy, intentional failure cases and trade-off analysis used to evaluate this portfolio case study.
