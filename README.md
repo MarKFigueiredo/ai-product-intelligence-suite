@@ -10,7 +10,7 @@ This project is a portfolio case study, not a commercial product.
 
 In 60 seconds, this app shows how a regulated product team can convert ambiguous compliance input into reviewed requirements, QA coverage and safer release communication.
 
-It demonstrates how I design AI product workflows for regulated enterprise software:
+The project demonstrates AI-assisted product workflows for regulated enterprise software:
 
 1. domain understanding;
 2. AI workflow design;

@@ -32,7 +32,7 @@ def test_public_review_documents_are_present():
         "WHAT_THIS_DEMONSTRATES.md",
         "PRODUCT_STRATEGY.md",
         "VALIDATION_LIMITATIONS.md",
-        "DEMO_WALKTHROUGH_FOR_HIRING.md",
+        "docs/reviewer/DEMO_WALKTHROUGH.md",
         "PORTFOLIO_REVIEW_GUIDE.md",
         "docs/SYSTEM_OVERVIEW.md",
         "docs/CLAIM_HYGIENE_SCANNER.md",

@@ -73,7 +73,7 @@ def test_real_usage_evidence_report_is_generated():
 def test_v20_docs_exist():
     for filename in [
         "docs/UI_UX_REVIEW.md",
-        "DEMO_WALKTHROUGH_FOR_HIRING.md",
+        "docs/reviewer/DEMO_WALKTHROUGH.md",
         "docs/STALENESS_AND_LINEAGE_POLICY.md",
         "docs/CONNECTOR_HANDOFF_CENTER.md",
         "REAL_USAGE_EVIDENCE_REPORT.md",
