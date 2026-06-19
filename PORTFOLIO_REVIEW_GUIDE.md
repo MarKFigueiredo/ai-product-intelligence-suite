@@ -61,14 +61,13 @@ What you should learn in 15 minutes:
 
 Use this path for serious evaluation of product judgment, implementation and technical PM credibility.
 
-1. Run the app locally using `START_HERE_UBUNTU.md`.
-2. Open the Interpret workflow and use the SAF-T/e-invoicing sample input.
-3. Review how obligations, citation support, reviewer corrections and final reports are represented.
-4. Open Discover and inspect the `obligation → requirement → Jira → QA` pipeline.
-5. Open Communicate and review the `claim → risk → reason → safer rewrite` table.
-6. Open Enterprise Readiness and inspect local role simulation, audit store, document hashes and signed report manifest.
-7. Run tests with `pytest`.
-8. Run the synthetic hero evaluation with:
+1. Open the Interpret workflow and use the SAF-T/e-invoicing sample input.
+2. Review how obligations, citation support, reviewer corrections and final reports are represented.
+3. Open Discover and inspect the `obligation → requirement → Jira → QA` pipeline.
+4. Open Communicate and review the `claim → risk → reason → safer rewrite` table.
+5. Open Enterprise Readiness and inspect local role simulation, audit store, document hashes and signed report manifest.
+6. Run tests with `pytest`.
+7. Run the synthetic hero evaluation with:
 
 ```bash
 python scripts/run_synthetic_hero_evaluation.py
@@ -132,20 +131,17 @@ v1.03 adds an in-app **Guided Demo — Portfolio Review** workflow so reviewers 
 
 After the 5-minute portfolio review, use these files to inspect the two concerns a skeptical reviewer is likely to raise:
 
-1. **Did the project learn from overclaim risk?**
-   - Read `docs/AUTO_SCORE_TO_CLAIM_SCANNER_STORY.md`.
-   - Then run the claim hygiene scanner.
 
-2. **Is the citation verifier credible beyond hand-tuned heuristics?**
+1. **Is the citation verifier credible beyond hand-tuned heuristics?**
    - Read `docs/CITATION_VERIFIER_VALIDATION_STUDY.md`.
    - Inspect `validation/citation_claims_sample.csv`.
    - Note that human labels are intentionally pending, not fabricated.
 
-3. **Does the Interpret workflow generalize beyond SAF-T?**
+2. **Does the Interpret workflow generalize beyond SAF-T?**
    - Read `docs/SWISS_QR_BILL_SECOND_DOMAIN_CASE.md`.
    - Run `python scripts/run_swiss_qr_bill_benchmark.py`.
 
-This is the intended v24 signal: fewer new modules, more validation discipline.
+This is the intended v1.04 signal: fewer new modules, more validation discipline.
 
 ## v1.04 scope discipline note
 

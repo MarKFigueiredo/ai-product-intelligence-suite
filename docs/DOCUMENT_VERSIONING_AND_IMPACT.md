@@ -1,6 +1,6 @@
 # Document Versioning and Impact
 
-v21 adds local document versioning and impact analysis helpers. The goal is to show how a changed compliance source should propagate through obligations, requirements, QA, release communication and audit evidence.
+v1.03 adds local document versioning and impact analysis helpers. The goal is to show how a changed compliance source should propagate through obligations, requirements, QA, release communication and audit evidence.
 
 ## Local behavior
 

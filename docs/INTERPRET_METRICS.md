@@ -1,6 +1,6 @@
 # Interpret Metrics — Calculation and Validation
 
-v16 changes the Interpret metrics from static demo values into **run-aware metrics**.
+v1.02 changes the Interpret metrics from static demo values into **run-aware metrics**.
 
 The important distinction is:
 

@@ -1,12 +1,12 @@
 # Real usage metrics and data portability
 
-v18 separates **synthetic evaluation** from **real usage telemetry**.
+v1.02 separates **synthetic evaluation** from **real usage telemetry**.
 
 Synthetic benchmark files are still useful for a portfolio review, but the app now also records metrics that are created when someone actually uses the product workflows.
 
 ## What is now real and persisted locally
 
-When a workflow is generated in the app, v18 writes a row to local SQLite:
+When a workflow is generated in the app, v1.02 writes a row to local SQLite:
 
 ```text
 .local_runs/usage_metrics.db
@@ -118,7 +118,7 @@ This is separate from browser downloads. Browser downloads are useful for the re
 
 ## Connectors
 
-v18 adds a safer connector model:
+v1.02 adds a safer connector model:
 
 1. **Local outbox mode** — default. The app saves real Jira/GitHub/Slack-shaped payload files locally in:
 
@@ -142,6 +142,6 @@ This shows product judgment beyond demo screens:
 - synthetic benchmarks and real usage metrics are clearly separated.
 
 
-## v19 QA quality gate
+## v1.02 QA quality gate
 
-v19 persists mandatory negative test coverage metrics for workflows that contain obligations and QA rows. These metrics are generated from actual run outputs and make it possible to track whether the portfolio app is producing release-ready QA evidence or only happy-path coverage.
+v1.02 persists mandatory negative test coverage metrics for workflows that contain obligations and QA rows. These metrics are generated from actual run outputs and make it possible to track whether the portfolio app is producing release-ready QA evidence or only happy-path coverage.

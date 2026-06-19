@@ -52,7 +52,7 @@ The first measures retrieval coverage. The second compares generated obligations
 - Audit logs are exportable but not persisted in an enterprise-grade audit store.
 - Screenshots in `assets/screenshots` are mockups until replaced with live Streamlit screenshots.
 
-## v16 metrics limitation
+## v1.02 metrics limitation
 
 Obligation precision and recall require an independent gold-standard obligation set for the same document. Without that file, the application deliberately displays these metrics as **N/A**.
 

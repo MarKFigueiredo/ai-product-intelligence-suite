@@ -123,7 +123,7 @@ Use this framing:
 
 
 
-## v19 extension — mandatory negative test coverage
+## v1.03 extension — mandatory negative test coverage
 
 | Error ID | Error class | Definition | Example | Product risk | Detection | Required response |
 |---|---|---|---|---|---|---|
