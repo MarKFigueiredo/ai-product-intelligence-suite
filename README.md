@@ -1,5 +1,11 @@
 # AI Product Intelligence Suite 1.04
 
+[![CI](https://github.com/MarKFigueiredo/ai-product-intelligence-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/MarKFigueiredo/ai-product-intelligence-suite/actions/workflows/ci.yml)
+![Coverage](.github/badges/coverage.svg)
+![Version](https://img.shields.io/badge/version-1.04-blue)
+[![Demo](https://img.shields.io/badge/demo-Streamlit%20Cloud-blue)](https://ai-app-intelligence-suite.streamlit.app/)
+
+
 **Portfolio case study for AI product workflows in regulated enterprise software.**
 
 [Live demo](https://ai-app-intelligence-suite.streamlit.app/) · [Release v1.04](https://github.com/MarKFigueiredo/ai-product-intelligence-suite/releases/tag/v1.04)
