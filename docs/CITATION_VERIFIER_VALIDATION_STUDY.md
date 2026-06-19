@@ -1,6 +1,6 @@
 # Citation Verifier Validation Study
 
-v24 adds a validation pack for the rule-based citation verifier. This is deliberately framed as a validation workflow, not as completed human evidence.
+v1.04 adds a validation pack for the rule-based citation verifier. This is deliberately framed as a validation workflow, not as completed human evidence.
 
 ## Why this exists
 

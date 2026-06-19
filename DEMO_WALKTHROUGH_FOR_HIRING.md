@@ -1,5 +1,5 @@
 
-## v24 15-second opening option
+## v1.04 15-second opening option
 
 “This is a portfolio case study, not a commercial product. One important lesson in building it was claim hygiene: an earlier version used self-scoring language, so I removed that and built an automated scanner to prevent overclaims from returning. The project now demonstrates not only AI workflow generation, but also review, validation, scope discipline and evidence.”
 

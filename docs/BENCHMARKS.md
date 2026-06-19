@@ -1,6 +1,6 @@
 # Benchmarks
 
-v16 includes two transparent local benchmarks for the **Interpret — Compliance-to-Product Studio** module. Both are synthetic and intentionally limited, but they avoid model self-scoring and give reviewers something reproducible to inspect.
+v1.02 includes two transparent local benchmarks for the **Interpret — Compliance-to-Product Studio** module. Both are synthetic and intentionally limited, but they avoid model self-scoring and give reviewers something reproducible to inspect.
 
 ## 1. Retrieval benchmark
 
@@ -77,7 +77,7 @@ They do **not** prove:
 - Multiple public/synthetic document types.
 - Reviewer column: `accepted`, `rejected`, `needs rewrite`.
 
-## v16 update — avoiding static demo metrics
+## v1.02 update — avoiding static demo metrics
 
 The bundled benchmark still exists for reproducible demonstration, but the app's **Quality Metrics** tab now treats precision and recall as run-specific gold-set metrics.
 
@@ -88,7 +88,7 @@ A template is available in the app and at `sample_inputs/interpret_gold_obligati
 
 ## 3. Synthetic hero-case evaluation
 
-v16 adds a portfolio-oriented synthetic evaluation for the deep SAF-T/e-invoicing hero case. It compares a manual baseline estimate, a simple LLM baseline and the assisted workflow.
+v1.02 adds a portfolio-oriented synthetic evaluation for the deep SAF-T/e-invoicing hero case. It compares a manual baseline estimate, a simple LLM baseline and the assisted workflow.
 
 Run:
 
