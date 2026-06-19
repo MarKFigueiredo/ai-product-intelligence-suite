@@ -14,3 +14,6 @@ local_runs/
 local runs/
 local\ runs/
 .local_refactor_backup/
+.coverage
+coverage.json
+htmlcov/

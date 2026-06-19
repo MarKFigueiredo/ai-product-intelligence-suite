@@ -4,7 +4,7 @@
 
 Compliance-heavy product workflows fail when teams only validate the happy path. In the SAF-T/e-invoicing hero case, a feature can look release-ready because the PRD, Jira ticket and acceptance criteria exist, while still missing tests for invalid, missing or exception data.
 
-v1.03 makes negative test coverage an explicit release gate.
+v1.04 makes negative test coverage an explicit release gate.
 
 ## Policy
 

@@ -1,4 +1,4 @@
-# Enterprise Readiness Roadmap — v1.02
+# Enterprise Readiness Roadmap — v1.04
 
 This repository is a portfolio prototype. It demonstrates product thinking and AI workflow design, not a production enterprise system.
 
@@ -50,7 +50,7 @@ This repository is a portfolio prototype. It demonstrates product thinking and A
 6. **Retention and compliance operations** — legal hold, purge jobs, export, data processing records.
 7. **Secure deployment** — container, CI security checks, secrets manager, network controls and IaC.
 
-## Portfolio proof now visible in v1.02
+## Portfolio proof now visible in v1.04
 
 The strongest evidence path is:
 
@@ -59,7 +59,7 @@ HERO_SAF_T_EINVOICING_CASE.md
 → PRODUCT_STRATEGY.md
 → SYNTHETIC_EVALUATION_RESULTS.md
 → enterprise_controls_service.py
-→ tests/test_v1.02_enterprise_controls.py
+→ tests/test_v1.04_enterprise_controls.py
 ```
 
 That path shows not only a product idea, but a measurable workflow and implemented local control surface.

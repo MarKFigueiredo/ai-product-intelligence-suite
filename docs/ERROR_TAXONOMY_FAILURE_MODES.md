@@ -108,8 +108,8 @@ This document demonstrates three PM skills:
 | Automation vs human review | Full automation looks impressive but is risky in compliance workflows. | Human review is explicit and downstream artefacts depend on review state. | Shows enterprise AI judgment: AI assists, humans approve. |
 | Coverage vs noise | Extracting more obligations can improve recall but increase reviewer burden. | Metrics include both recall and reviewer correction rate. | Shows understanding that “more output” is not always better product value. |
 | Rule-based evaluation vs LLM judgment | Rules are transparent but limited; LLM judges are flexible but subjective. | PRD completeness and support checks are rule-based where possible; LLM output is treated as draft. | Shows preference for deterministic checks in high-trust workflows. |
-| Broad suite vs focused hero workflow | Four modules demonstrate breadth but may dilute the message. | v1.02 positions SAF-T/e-invoicing as the hero workflow and the other modules as supporting workflows. | Maximizes hiring signal by showing depth first, breadth second. |
-| Enterprise realism vs prototype scope | Full SSO/RBAC/tenancy would be overkill for a portfolio. | v1.02 implement local role simulation, audit store, document hashes and signed report manifest. | Shows production awareness without pretending the prototype is production software. |
+| Broad suite vs focused hero workflow | Four modules demonstrate breadth but may dilute the message. | v1.04 positions SAF-T/e-invoicing as the hero workflow and the other modules as supporting workflows. | Maximizes hiring signal by showing depth first, breadth second. |
+| Enterprise realism vs prototype scope | Full SSO/RBAC/tenancy would be overkill for a portfolio. | v1.04 implement local role simulation, audit store, document hashes and signed report manifest. | Shows production awareness without pretending the prototype is production software. |
 | Simplicity vs auditability | Simple UI is easier to demo, but enterprise trust requires detail. | The demo uses a simple linear story, while deep docs expose audit details. | Supports both recruiter screening and senior technical review. |
 | Synthetic metrics vs no metrics | Synthetic metrics are imperfect, but no metrics suggests weak evaluation discipline. | Metrics are labelled synthetic and not production performance. | Shows honest measurement discipline. |
 
@@ -123,7 +123,7 @@ Use this framing:
 
 
 
-## v1.03 extension — mandatory negative test coverage
+## v1.04 extension — mandatory negative test coverage
 
 | Error ID | Error class | Definition | Example | Product risk | Detection | Required response |
 |---|---|---|---|---|---|---|

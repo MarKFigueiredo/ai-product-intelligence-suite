@@ -30,7 +30,7 @@ flowchart LR
 - `sample_inputs/` provides safe synthetic demos for public deployment.
 - `benchmark/` contains reproducible synthetic evaluation fixtures and outputs.
 
-## v1.02 enterprise-control slice
+## v1.04 enterprise-control slice
 
 The package now implements a small real local control surface instead of only documenting roadmap items:
 
@@ -45,4 +45,4 @@ The package now implements a small real local control surface instead of only do
 
 ## Why this matters
 
-A Principal PM or Series C reviewer should be able to see product thinking, responsible-AI controls and a path from prototype to enterprise workflow. v1.02 makes that path more credible by pairing the product narrative with implemented local controls and tests.
+A Principal PM or Series C reviewer should be able to see product thinking, responsible-AI controls and a path from prototype to enterprise workflow. v1.04 makes that path more credible by pairing the product narrative with implemented local controls and tests.

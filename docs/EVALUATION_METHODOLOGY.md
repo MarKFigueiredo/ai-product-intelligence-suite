@@ -1,6 +1,6 @@
 # Evaluation Methodology
 
-The v1.02 evaluation layer deliberately avoids model self-scoring.
+The v1.04 evaluation layer deliberately avoids model self-scoring.
 
 ## Signal types
 
@@ -60,9 +60,9 @@ python scripts/run_interpret_quality_metrics.py
 
 The first benchmark checks retrieval coverage. The second compares generated obligations against a hand-written synthetic gold set and reports precision/recall/F1 proxies.
 
-## v1.02 update — run-specific metrics
+## v1.04 update — run-specific metrics
 
-v1.02 changes the Quality Metrics tab so that it no longer shows synthetic precision/recall values unless a reviewer provides a gold obligations file for the current document.
+v1.04 changes the Quality Metrics tab so that it no longer shows synthetic precision/recall values unless a reviewer provides a gold obligations file for the current document.
 
 - **Calculated on every run:** citation support rate, unsupported claim rate, human review rate.
 - **Calculated only with uploaded gold obligations:** obligation precision, obligation recall.
@@ -74,4 +74,4 @@ See `docs/INTERPRET_METRICS.md` for formulas and validation details.
 
 ## Error taxonomy and trade-offs
 
-v1.03 adds a formal error taxonomy and failure-mode analysis in `docs/ERROR_TAXONOMY_FAILURE_MODES.md`. This is used to classify unsupported claims, weak support, missing obligations, hallucinated obligations, lost conditions, unsafe customer wording, QA coverage gaps and document version drift.
+v1.04 adds a formal error taxonomy and failure-mode analysis in `docs/ERROR_TAXONOMY_FAILURE_MODES.md`. This is used to classify unsupported claims, weak support, missing obligations, hallucinated obligations, lost conditions, unsafe customer wording, QA coverage gaps and document version drift.

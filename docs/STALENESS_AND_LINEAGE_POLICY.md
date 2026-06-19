@@ -2,7 +2,7 @@
 
 ## Purpose
 
-In regulated enterprise workflows, a requirement, QA case or release note can become unsafe if the upstream source or reviewer decision changes after it was generated. v20 makes this explicit through lineage and staleness checks.
+In regulated enterprise workflows, a requirement, QA case or release note can become unsafe if the upstream source or reviewer decision changes after it was generated. v1.04 makes this explicit through lineage and staleness checks.
 
 ## Artefact chain
 

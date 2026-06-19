@@ -117,14 +117,14 @@ I design AI product workflows that turn ambiguous compliance inputs into auditab
 
 
 
-## v1.02 note — mandatory negative test coverage
+## v1.04 note — mandatory negative test coverage
 
-v11.02 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.
+v1.04 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.
 
 
-## v1.03 note — guided review experience
+## v1.04 note — guided review experience
 
-v1.03 adds an in-app **Guided Demo — Portfolio Review** workflow so reviewers do not need to infer the product story from repository structure. It includes persona paths, release gates, evidence drawer, lineage/staleness, run comparison, skill evidence and real-vs-simulated capability status.
+v1.04 adds an in-app **Guided Demo — Portfolio Review** workflow so reviewers do not need to infer the product story from repository structure. It includes persona paths, release gates, evidence drawer, lineage/staleness, run comparison, skill evidence and real-vs-simulated capability status.
 
 
 ## v1.04 validation-first review path
@@ -148,7 +148,7 @@ This is the intended v1.04 signal: fewer new modules, more validation discipline
 The app now defaults to a focused review path. This is intentional: a hiring reviewer should not need to inspect every deep-dive tab to understand the thesis. The full artifact map remains available for detailed Principal PM, Engineering, QA, Compliance or academic review.
 
 
-## 1.01 technical review additions
+## 1.04 technical review additions
 
 For architecture and AI product learning-loop review, see:
 

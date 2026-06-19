@@ -70,7 +70,7 @@ def test_real_usage_evidence_report_is_generated():
     assert "Total workflow runs" in report
 
 
-def test_v20_docs_exist():
+def test_current_public_docs_exist():
     for filename in [
         "docs/UI_UX_REVIEW.md",
         "docs/reviewer/DEMO_WALKTHROUGH.md",

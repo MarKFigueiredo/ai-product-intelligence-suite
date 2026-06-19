@@ -8,7 +8,7 @@ The evaluation compares three baselines:
 
 1. **Manual baseline estimate** — how a PM/QA team might work from docs/spreadsheets without the tool.
 2. **Simple LLM baseline** — a one-shot prompt with no reviewer workflow, traceability matrix or deterministic checks.
-3. **Assisted workflow** — the v1.03 hero workflow using source-grounded obligations, reviewer mode, rule-based checks, QA mapping, release risk review and audit manifest.
+3. **Assisted workflow** — the v1.04 hero workflow using source-grounded obligations, reviewer mode, rule-based checks, QA mapping, release risk review and audit manifest.
 
 ## Headline metrics
 
@@ -17,7 +17,7 @@ The evaluation compares three baselines:
 | Time to first requirement set | 45 min | 14 min | 8 min | Faster drafting because obligations and traceability templates are reused. |
 | Unsupported claim rate | 18% | 22% | 6% | Reviewer mode and claim risk checks reduce unsupported or overbroad statements. |
 | QA coverage | 60% | 68% | 90% | Explicit obligation-to-QA mapping surfaces gaps. |
-| Negative test coverage | 0% | 35% | 100% | v1.03 blocks release-ready status unless every mapped obligation has a negative/edge/failure test. |
+| Negative test coverage | 0% | 35% | 100% | v1.04 blocks release-ready status unless every mapped obligation has a negative/edge/failure test. |
 | Reviewer correction rate | N/A | 30% | 40% | Higher is acceptable here because the workflow exposes uncertainty and corrections. |
 | Missing obligation recall on gold set | 70% | 80% | 90% | RAG plus reviewer corrections recover more expected synthetic obligations. |
 | Release risk reduction | 1 claim | 2 claims | 4 claims | Claim-risk table rewrites more unsafe customer-facing claims. |
@@ -34,7 +34,7 @@ Output:
 benchmark/results/synthetic_hero_evaluation.json
 ```
 
-## What improved by v1.03
+## What improved by v1.04
 
 The project no longer presents “18 tests passed” as the main proof. Tests still matter, but the portfolio evidence now includes:
 

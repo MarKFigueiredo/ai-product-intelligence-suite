@@ -49,6 +49,6 @@ Then explain the workflow:
 
 
 
-## v1.02 note — mandatory negative test coverage
+## v1.04 note — mandatory negative test coverage
 
-v1.02 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.
+v1.04 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.

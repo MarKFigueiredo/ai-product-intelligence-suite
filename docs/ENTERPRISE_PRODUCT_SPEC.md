@@ -1,10 +1,10 @@
-# Enterprise Product Spec — v1.02
+# Enterprise Product Spec — v1.04
 
 This document captures the enterprise product elements represented in the suite, what is now genuinely implemented as local prototype control, and what still requires production platform engineering.
 
-## Implemented or demoed in v1.02
+## Implemented or demoed in v1.04
 
-| Area | v1.02 implementation | Production note |
+| Area | v1.04 implementation | Production note |
 |---|---|---|
 | Run history | Local JSONL run metric history for Interpret | Move to tenant-scoped encrypted database / audit store |
 | Run comparison | Latest runs table with metric deltas | Add dashboards, filtering and tenant/project dimensions |
@@ -26,27 +26,27 @@ This document captures the enterprise product elements represented in the suite,
 
 ### Authentication
 
-Use OIDC/SAML SSO, tenant-aware session handling, service accounts for integrations and token rotation. v1.02 only simulates user and role locally.
+Use OIDC/SAML SSO, tenant-aware session handling, service accounts for integrations and token rotation. v1.04 only simulates user and role locally.
 
 ### RBAC
 
-Minimum roles: Admin, Product Manager, Compliance Reviewer, QA, Support, Legal/Compliance, Auditor and Viewer. Reviewer approval should require a reviewer/compliance role; export/admin functions should be gated separately. v1.02 demonstrates the matrix and permission checks, but does not secure an API boundary.
+Minimum roles: Admin, Product Manager, Compliance Reviewer, QA, Support, Legal/Compliance, Auditor and Viewer. Reviewer approval should require a reviewer/compliance role; export/admin functions should be gated separately. v1.04 demonstrates the matrix and permission checks, but does not secure an API boundary.
 
 ### Secure storage
 
-Source documents, embeddings, outputs and review decisions should be encrypted at rest with tenant boundaries. v1.02 stores metadata, hashes and audit events locally; it does not provide encrypted tenant storage.
+Source documents, embeddings, outputs and review decisions should be encrypted at rest with tenant boundaries. v1.04 stores metadata, hashes and audit events locally; it does not provide encrypted tenant storage.
 
 ### Persistent audit logs
 
-Production logs should be append-only and include source hash, prompt/config metadata, output hash, model, reviewer identity, verdict, export timestamp and retention policy. v1.02 includes a SQLite audit store to show the data model and persistence path.
+Production logs should be append-only and include source hash, prompt/config metadata, output hash, model, reviewer identity, verdict, export timestamp and retention policy. v1.04 includes a SQLite audit store to show the data model and persistence path.
 
 ### Document versioning
 
-Each uploaded source should have immutable versions with content hash, extracted text hash, parser metadata and reviewer status. v1.02 includes SHA-256 document version records and Interpret diff view, but not a full version store.
+Each uploaded source should have immutable versions with content hash, extracted text hash, parser metadata and reviewer status. v1.04 includes SHA-256 document version records and Interpret diff view, but not a full version store.
 
 ### Integrations
 
-Jira, Confluence, Slack and GitHub should use OAuth apps or installation tokens, with scope minimization, retry queues, webhook event logs, rate-limit handling and admin approval. v1.02 includes API-shaped mock payloads and parser stubs.
+Jira, Confluence, Slack and GitHub should use OAuth apps or installation tokens, with scope minimization, retry queues, webhook event logs, rate-limit handling and admin approval. v1.04 includes API-shaped mock payloads and parser stubs.
 
 ### Observability
 
@@ -66,6 +66,6 @@ Use containerized deployment, CI checks, vulnerability scanning, managed secrets
 
 ## Honest positioning
 
-v1.02 goes beyond slides by implementing a few local controls: role simulation, permission checks, document version hashes, SQLite audit persistence, signed manifests and Jira/GitHub payload builders. It is still not a production enterprise system. The correct claim is:
+v1.04 goes beyond slides by implementing a few local controls: role simulation, permission checks, document version hashes, SQLite audit persistence, signed manifests and Jira/GitHub payload builders. It is still not a production enterprise system. The correct claim is:
 
 > The suite demonstrates the product workflow, control model, review/audit artefacts and implementation path needed for enterprise readiness; full enforcement requires production platform engineering.

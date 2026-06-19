@@ -1,6 +1,6 @@
 """Guided portfolio demo data and UX helpers.
 
-The v20 portfolio experience is intentionally demo-friendly but not fake in its
+The v1.04 portfolio experience is intentionally demo-friendly but not fake in its
 product logic. It uses the SAF-T/e-invoicing hero case to show one complete
 workflow from source input to obligation, requirement, Jira, QA, release risk,
 incident and audit evidence.

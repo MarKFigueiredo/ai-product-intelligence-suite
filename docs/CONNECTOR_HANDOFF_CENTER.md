@@ -16,7 +16,7 @@ Optional. Live Jira/GitHub/Slack calls require credentials in `.env` and explici
 
 ## Payloads
 
-v20 includes previewable payloads for:
+v1.04 includes previewable payloads for:
 
 - Jira issue creation;
 - GitHub issue creation;

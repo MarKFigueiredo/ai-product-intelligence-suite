@@ -201,7 +201,7 @@ mark { background: #fef08a; padding: 0.05rem 0.15rem; border-radius: 0.2rem; }
 .timeline-wrap { position:relative; margin: .7rem 0 1rem 0; padding-left:1.1rem; }
 .timeline-wrap:before { content:""; position:absolute; left:.35rem; top:.25rem; bottom:.25rem; width:2px; background:#cbd5e1; }
 .timeline-node { position:relative; margin:0 0 .72rem 0; padding:.76rem .9rem; border-radius:16px; background:#fff; border:1px solid #e2e8f0; box-shadow:0 1px 2px rgba(15,23,42,.05); }
-.timeline-node:before { content:""; position:absolute; left:-1.02rem; top:.95rem; width:.62rem; height:.62rem; border-radius:999px; background:#2563eb; border:2px solid #dbeafe; }
+.timeline-node:before { content:""; position:absolute; left:-1.04rem; top:.95rem; width:.62rem; height:.62rem; border-radius:999px; background:#2563eb; border:2px solid #dbeafe; }
 .timeline-time { font-size:.72rem; color:#64748b; font-weight:850; text-transform:uppercase; letter-spacing:.045em; }
 .timeline-title { font-weight:900; color:#0f172a; margin-top:.12rem; }
 .timeline-body { font-size:.86rem; color:#334155; margin-top:.14rem; }

@@ -1,6 +1,6 @@
 # Approval Workflow State Machine
 
-This project is a portfolio case study, not production workflow software. v1.03 adds a concrete local approval state machine so reviewers can see how AI-generated artefacts move through Product, QA, Compliance, Support and Engineering review.
+This project is a portfolio case study, not production workflow software. v1.04 adds a concrete local approval state machine so reviewers can see how AI-generated artefacts move through Product, QA, Compliance, Support and Engineering review.
 
 ## States
 

@@ -63,6 +63,6 @@ The next step is not another enterprise module. v1.04 focuses on validation and 
 - make the auto-score-to-scanner learning story visible;
 - keep advanced modules behind the full artifact map.
 
-## 1.01 scope decision
+## 1.04 scope decision
 
-1.01 focuses on core pipeline structure, human feedback reuse and guided UX. It intentionally does not add new domains, new connectors, new approval states or new dashboards. The aim is to show that the portfolio can get deeper without getting broader.
+1.04 focuses on core pipeline structure, human feedback reuse and guided UX. It intentionally does not add new domains, new connectors, new approval states or new dashboards. The aim is to show that the portfolio can get deeper without getting broader.

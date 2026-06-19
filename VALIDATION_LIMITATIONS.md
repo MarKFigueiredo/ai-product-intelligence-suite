@@ -1,4 +1,4 @@
-# Validation and Limitations — v1.01
+# Validation and Limitations — v1.04
 
 This project is intentionally presented as a **portfolio-grade prototype**, not as a production compliance product.
 
@@ -52,13 +52,13 @@ The first measures retrieval coverage. The second compares generated obligations
 - Audit logs are exportable but not persisted in an enterprise-grade audit store.
 - Screenshots in `assets/screenshots` are mockups until replaced with live Streamlit screenshots.
 
-## v1.02 metrics limitation
+## v1.04 metrics limitation
 
 Obligation precision and recall require an independent gold-standard obligation set for the same document. Without that file, the application deliberately displays these metrics as **N/A**.
 
 The citation-related metrics are run-specific, but still rule-based. They should be used as review signals, not compliance proof.
 
 
-## v1.01 failure-mode framing
+## v1.04 failure-mode framing
 
 See `docs/ERROR_TAXONOMY_FAILURE_MODES.md` for the formal error taxonomy, intentional failure cases and trade-off analysis used to evaluate this portfolio case study.
