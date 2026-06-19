@@ -11,5 +11,5 @@ benchmark/results/*.tmp
 README_old_backup.md
 local_runs/
 .local_runs/
-.local\ runs/
 local runs/
+local\ runs/
