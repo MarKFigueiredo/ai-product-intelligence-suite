@@ -2,42 +2,54 @@
 
 **Portfolio case study for AI product workflows in regulated enterprise software.**
 
-Live demo: https://ai-app-intelligence-suite.streamlit.app/
+[Live demo](https://ai-app-intelligence-suite.streamlit.app/) · [Release v1.04](https://github.com/MarKFigueiredo/ai-product-intelligence-suite/releases/tag/v1.04)
+
+![AI Product Intelligence Suite hero](assets/screenshots/00_landing_hero.svg)
 
 This project is a portfolio case study, not a commercial product.
 
-It is not a production enterprise platform.
+It demonstrates how I design AI product workflows for regulated enterprise software:
 
-It demonstrates how I design AI-assisted workflows that turn ambiguous compliance source material into reviewable, testable and audit-aware product decisions.
+1. domain understanding;
+2. AI workflow design;
+3. human-in-the-loop review;
+4. risk-aware communication;
+5. evaluation discipline;
+6. enterprise readiness judgment;
+7. product strategy.
 
 > Positioning: I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
 
-## Reviewer signal checklist
+## 10-second summary
 
-This portfolio case study demonstrates:
+The suite shows how a compliance-sensitive product team could move from regulatory source material to reviewed requirements, QA coverage, safer release communication and audit-ready evidence.
 
-- domain understanding in regulated enterprise software;
-- AI workflow design for product teams;
-- human-in-the-loop review;
-- risk-aware communication;
-- evaluation discipline;
-- enterprise readiness judgment;
-- product strategy.
+It is intentionally human-in-the-loop. The goal is not to automate compliance decisions; the goal is to make product decisions more traceable, reviewable and measurable.
 
-## What this project demonstrates
+## What this is
 
-1. Domain understanding in regulated enterprise workflows.
-2. AI workflow design beyond simple prompting.
-3. Human-in-the-loop review and approval gates.
-4. Risk-aware release communication.
-5. Evaluation discipline and claim hygiene.
-6. QA traceability, including mandatory negative test coverage.
-7. Enterprise readiness judgment without claiming production completeness.
-8. Hands-on execution with a working Streamlit prototype, services, tests and documentation.
+- A working Streamlit portfolio prototype.
+- A regulated-enterprise AI product workflow case study.
+- A demonstration of product judgment, release risk thinking and evidence design.
+- A local prototype with tests, services, docs, usage metrics and exports.
+
+## What this is not
+
+- Not a production SaaS platform.
+- Not legal, tax, financial or regulatory advice.
+- Not a replacement for compliance, legal, QA or product approval.
+- Not a claim of enterprise deployment completeness.
+
+## 5-minute review path
+
+1. Open the [live demo](https://ai-app-intelligence-suite.streamlit.app/).
+2. Keep **Demo Mode ON**.
+3. Review the hero workflow below.
+4. Read [`HERO_CASE_STUDY.md`](HERO_CASE_STUDY.md).
+5. Read [`WHAT_THIS_DEMONSTRATES.md`](WHAT_THIS_DEMONSTRATES.md).
+6. Open [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md) for architecture and real-vs-simulated scope.
 
 ## System flow
-
-The suite demonstrates a product workflow from regulatory material to reviewed product artefacts, safer communication and audit-ready evidence.
 
 ```mermaid
 flowchart TD
@@ -71,20 +83,7 @@ source document
 → final audit report
 ```
 
-The goal is not to automate compliance decisions. The goal is to make product decisions more traceable, reviewable and measurable.
-
-## Start here
-
-If you are reviewing this project for hiring:
-
-- [`PORTFOLIO_REVIEW_GUIDE.md`](PORTFOLIO_REVIEW_GUIDE.md) — 5-minute, 15-minute and 45-minute review paths.
-- [`WHAT_THIS_DEMONSTRATES.md`](WHAT_THIS_DEMONSTRATES.md) — skills-to-evidence map.
-- [`HERO_CASE_STUDY.md`](HERO_CASE_STUDY.md) — short hero case summary.
-- [`DEMO_WALKTHROUGH_FOR_HIRING.md`](DEMO_WALKTHROUGH_FOR_HIRING.md) — 90-second demo walkthrough.
-- [`PRODUCT_STRATEGY.md`](PRODUCT_STRATEGY.md) — ICP, personas, wedge, roadmap and metrics.
-- [`VALIDATION_LIMITATIONS.md`](VALIDATION_LIMITATIONS.md) — what is validated, synthetic, local or not production-ready.
-- [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md)
-- [`docs/UI_UX_REVIEW.md`](docs/UI_UX_REVIEW.md) — system architecture, workflow and real-vs-simulated explanation.
+This is intentionally deeper than a typical AI demo output. It shows how one compliance-sensitive input can propagate through product, QA, release communication and incident learning.
 
 ## Key product capabilities
 
@@ -120,41 +119,26 @@ Implemented as local portfolio controls:
 
 These are product judgment demonstrations, not claims of production SaaS readiness.
 
+## Useful review documents
+
+- [`PORTFOLIO_REVIEW_GUIDE.md`](PORTFOLIO_REVIEW_GUIDE.md) — 5-minute, 15-minute and 45-minute review paths.
+- [`WHAT_THIS_DEMONSTRATES.md`](WHAT_THIS_DEMONSTRATES.md) — skills-to-evidence map.
+- [`PRODUCT_STRATEGY.md`](PRODUCT_STRATEGY.md) — ICP, personas, wedge, roadmap and metrics.
+- [`VALIDATION_LIMITATIONS.md`](VALIDATION_LIMITATIONS.md) — what is validated, synthetic, local or not production-ready.
+- [`docs/SYSTEM_OVERVIEW.md`](docs/SYSTEM_OVERVIEW.md) — architecture, workflow and real-vs-simulated explanation.
+- [`docs/UI_UX_REVIEW.md`](docs/UI_UX_REVIEW.md) — public UI/UX review criteria.
+- [`docs/CLAIM_HYGIENE_SCANNER.md`](docs/CLAIM_HYGIENE_SCANNER.md) — release-claim risk and safer wording control.
+
 ## Companion domains
 
 The main hero case is SAF-T PT / e-invoicing.
 
-Additional companion domains are included to show generalization thinking:
+Additional companion domains show generalization thinking:
 
 - Swiss QR-Bill / invoice payment compliance;
 - SEPA / ISO 20022 structured-addresses companion playbook for a separate MIT agentic AI course project.
 
-The payments playbook is intentionally kept outside the Streamlit workflow to preserve scope discipline.
-
-## What is real vs simulated
-
-Real local capabilities:
-
-- Streamlit app;
-- services and unit tests;
-- local SQLite usage metrics;
-- import/export flows;
-- document hashing;
-- local connector outbox payloads;
-- claim hygiene scan;
-- citation-support heuristics;
-- QA negative coverage gate.
-
-Not production-ready:
-
-- production SSO;
-- multi-tenant RBAC;
-- encrypted tenant storage;
-- immutable audit logs;
-- full Jira/Slack/Confluence OAuth integrations;
-- production observability;
-- deployment hardening;
-- legal/compliance approval.
+The payments playbook is intentionally kept outside the main Streamlit workflow to preserve scope discipline.
 
 ## Run locally
 
@@ -175,4 +159,4 @@ This project does not provide legal, compliance, tax, financial or regulatory ad
 
 ## Release note
 
-This repository was published as a consolidated public portfolio release. Earlier internal iterations were developed offline and are summarized in project documentation where relevant.
+This repository was published as a sanitized consolidated public portfolio release. Earlier internal iterations were developed offline and are kept outside the public repository.
