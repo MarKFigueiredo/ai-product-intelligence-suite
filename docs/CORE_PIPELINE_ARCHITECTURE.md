@@ -1,12 +1,12 @@
-# Core Pipeline Architecture — v25
+# Core Pipeline Architecture — v1.04
 
-v25 reduces implementation risk by moving the product thesis out of Streamlit-only pages and into a small, testable core pipeline.
+v1.04 reduces implementation risk by moving the product thesis out of Streamlit-only pages and into a small, testable core pipeline.
 
 ## Why this matters
 
 Earlier versions had strong product logic, but too much orchestration lived near UI code. That made the app harder to reason about for an Engineering Lead or Staff PM reviewer.
 
-The v25 target is simple:
+The v1.04 target is simple:
 
 ```text
 UI pages collect inputs and display results.

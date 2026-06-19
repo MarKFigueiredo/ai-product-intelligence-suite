@@ -20,7 +20,7 @@ It demonstrates how I design AI product workflows for regulated enterprise softw
 6. enterprise readiness judgment;
 7. product strategy.
 
-> Positioning: I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
+> Positioning: AI-assisted workflow design for turning ambiguous compliance inputs into auditable product decisions.
 
 ## 10-second summary
 

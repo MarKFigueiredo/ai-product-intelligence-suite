@@ -165,9 +165,9 @@ The final export package should include:
 
 ---
 
-## 11. What this demonstrates about my skills
+## 11. Evidence map for reviewers
 
-| Skill | Evidence in the case |
+| Review dimension | Evidence in the case |
 |---|---|
 | Domain understanding | SAF-T/e-invoicing source material translated into product artifacts. |
 | AI workflow design | Source → obligation → review → requirement → QA → release → audit. |

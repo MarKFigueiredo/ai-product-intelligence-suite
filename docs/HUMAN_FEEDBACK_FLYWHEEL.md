@@ -1,6 +1,6 @@
-# Human Feedback Flywheel — v25
+# Human Feedback Flywheel — v1.04
 
-v25 separates reviewer decisions from generic usage metrics and stores them in a dedicated `human_reviews` table.
+v1.04 separates reviewer decisions from generic usage metrics and stores them in a dedicated `human_reviews` table.
 
 ## What is stored
 

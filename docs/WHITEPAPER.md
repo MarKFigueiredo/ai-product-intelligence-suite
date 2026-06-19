@@ -10,9 +10,9 @@
 
 AI Product Intelligence Suite 1.04 demonstrates how AI-assisted workflows can help regulated enterprise product teams convert ambiguous compliance source material into reviewable, testable and audit-aware product decisions.
 
-The project is intentionally not positioned as a production compliance platform. Instead, it shows how a product leader can design a workflow that combines domain understanding, AI-assisted drafting, human review, QA coverage, release-risk communication and audit traceability.
+The project is intentionally not positioned as a production compliance platform. Instead, it shows how a product team can design a workflow that combines domain understanding, AI-assisted drafting, human review, QA coverage, release-risk communication and audit traceability.
 
-The core contribution is not a chatbot. It is a structured product workflow:
+The central artifact is not a chatbot. It is a structured product workflow:
 
 ```text
 source material → obligations → reviewer corrections → requirements → Jira-style tickets → QA coverage → safer release communication → audit evidence
@@ -158,7 +158,7 @@ This is important because overstating maturity would weaken trust. The value of 
 
 ## 8. Why this matters for AI product management
 
-Many AI portfolios show a model connected to an interface. This project shows a broader product discipline:
+A common AI demo pattern is a model connected to an interface. This project shows a broader product discipline:
 
 - defining a regulated workflow;
 - designing a human-in-the-loop review pattern;
@@ -168,7 +168,7 @@ Many AI portfolios show a model connected to an interface. This project shows a 
 - producing audit-ready evidence;
 - acknowledging limitations and scope.
 
-That combination is closer to enterprise AI product work than a generic chatbot demo.
+This combination emphasizes enterprise AI product patterns rather than a generic chatbot demo.
 
 ---
 
