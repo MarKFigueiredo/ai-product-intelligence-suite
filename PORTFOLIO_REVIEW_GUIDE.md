@@ -154,7 +154,7 @@ For architecture and AI product learning-loop review, see:
 
 - `docs/CORE_PIPELINE_ARCHITECTURE.md`
 - `docs/HUMAN_FEEDBACK_FLYWHEEL.md`
-- `docs/UX_DENSITY_REDUCTION_V25.md`
+- `docs/UX_REVIEW_DENSITY_POLICY.md`
 
 
 ## Companion course artifact
