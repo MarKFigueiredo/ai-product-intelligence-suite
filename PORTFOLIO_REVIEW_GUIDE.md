@@ -118,17 +118,17 @@ I design AI product workflows that turn ambiguous compliance inputs into auditab
 
 
 
-## v19 note — mandatory negative test coverage
+## v1.02 note — mandatory negative test coverage
 
-v19 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.
-
-
-## v21 note — guided review experience
-
-v21 adds an in-app **Guided Demo — Portfolio Review** workflow so reviewers do not need to infer the product story from repository structure. It includes persona paths, release gates, evidence drawer, lineage/staleness, run comparison, skill evidence and real-vs-simulated capability status.
+v11.02 adds a deterministic QA release gate: every obligation mapped into the product workflow must have at least one obligation-linked negative/edge/failure test. This demonstrates product-quality judgment beyond happy-path generation.
 
 
-## v24 validation-first review path
+## v1.03 note — guided review experience
+
+v1.03 adds an in-app **Guided Demo — Portfolio Review** workflow so reviewers do not need to infer the product story from repository structure. It includes persona paths, release gates, evidence drawer, lineage/staleness, run comparison, skill evidence and real-vs-simulated capability status.
+
+
+## v1.04 validation-first review path
 
 After the 5-minute portfolio review, use these files to inspect the two concerns a skeptical reviewer is likely to raise:
 
@@ -147,7 +147,7 @@ After the 5-minute portfolio review, use these files to inspect the two concerns
 
 This is the intended v24 signal: fewer new modules, more validation discipline.
 
-## v23 scope discipline note
+## v1.04 scope discipline note
 
 The app now defaults to a focused review path. This is intentional: a hiring reviewer should not need to inspect every deep-dive tab to understand the thesis. The full artifact map remains available for detailed Principal PM, Engineering, QA, Compliance or academic review.
 
