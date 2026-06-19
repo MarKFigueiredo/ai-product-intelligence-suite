@@ -15,7 +15,6 @@ LEGACY_SERVICE_UI_EXCEPTIONS = {
     "services/citation_verifier.py",
     "services/evidence_report_service.py",
     "services/usage_metrics_service.py",
-    "services/openai_service.py",
 }
 
 UI_ALLOWED_PREFIXES = (

@@ -12,7 +12,7 @@ This report checks tracked Python files for UI-layer leakage.
 ## Summary
 
 - Violations: 0
-- Known service UI debt files: 1
+- Known service UI debt files: 0
 
 ## Violations
 
@@ -20,9 +20,7 @@ No architecture boundary violations found.
 
 ## Known service UI debt
 
-| File | Issue | Next action |
-|---|---|---|
-| `services/openai_service.py` | Legacy service references Streamlit | Move UI formatting/rendering out of the service layer. |
+No known service UI debt found.
 
 ## Recommended next refactor order
 

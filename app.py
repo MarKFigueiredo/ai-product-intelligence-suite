@@ -22,6 +22,8 @@ from ui.metrics_page import render_usage_metrics_page
 from ui.portfolio_page import render_landing_page, render_portfolio_landing
 from ui.limitations_page import render_limitations_page
 from ui.sidebar import render_sidebar
+from ui.streamlit_secrets import sync_streamlit_secrets_to_env
+sync_streamlit_secrets_to_env()
 
 
 def main() -> None:
