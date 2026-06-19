@@ -1,6 +1,6 @@
 # Quality Learning Loop
 
-v21 adds a quality learning layer on top of persisted usage metrics. This moves the project beyond “we collect metrics” toward “we use metrics to learn where the workflow improves or fails.”
+v1.03 adds a quality learning layer on top of persisted usage metrics. This moves the project beyond “we collect metrics” toward “we use metrics to learn where the workflow improves or fails.”
 
 ## Current local signals
 

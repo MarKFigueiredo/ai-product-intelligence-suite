@@ -1,10 +1,10 @@
-# Claim Hygiene Audit — v22
+# Claim Hygiene Audit — v1.03
 
 This project is intended to increase hiring signal, not to claim commercial traction, production SaaS readiness, legal compliance guarantees or endorsement from any university/company.
 
 ## What was reviewed
 
-The v22 audit focuses on claims that a skeptical reviewer could reasonably challenge:
+The v1.03 audit focuses on claims that a skeptical reviewer could reasonably challenge:
 
 | Claim category | Risk | v22 mitigation |
 |---|---|---|
@@ -21,7 +21,7 @@ The v22 audit focuses on claims that a skeptical reviewer could reasonably chall
 The conservative local claim-hygiene scanner reports:
 
 ```text
-Pass: no unframed high/medium claim risks found by the v22 scan.
+Pass: no unframed high/medium claim risks found by the v1.03 scan.
 ```
 
 The scanner is not a legal review. It is a portfolio hygiene tool to catch obvious overclaims before publishing.

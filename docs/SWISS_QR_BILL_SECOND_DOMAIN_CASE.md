@@ -1,6 +1,6 @@
 # Swiss QR-Bill second-domain case
 
-This is a small second-domain validation case added in v24 to reduce overfitting to the SAF-T PT / e-invoicing hero case.
+This is a small second-domain validation case added in v1.04 to reduce overfitting to the SAF-T PT / e-invoicing hero case.
 
 It is intentionally narrower than the SAF-T hero case. Its purpose is not to create a second full product module; it is to test whether the same Interpret workflow can handle a different compliance-heavy invoice/payment domain.
 
@@ -47,4 +47,4 @@ The project should now demonstrate one strong hero workflow and one small genera
 | SAF-T PT / e-invoicing | Deep hero workflow |
 | Swiss QR-Bill | Second-domain generalization check |
 
-This is a deliberate scope choice. v24 does not add another broad module; it adds a compact validation case.
+This is a deliberate scope choice. v1.04 does not add another broad module; it adds a compact validation case.
