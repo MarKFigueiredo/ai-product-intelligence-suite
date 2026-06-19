@@ -6,9 +6,9 @@ This report is generated from tracked repository files only. It excludes `.venv`
 
 - Python files over 400 lines: 3
 - Markdown files over 220 lines: 1
-- Functions over 80 lines: 13
-- Files using Streamlit: 26
-- Tone findings: 12
+- Functions over 80 lines: 14
+- Files using Streamlit: 27
+- Tone findings: 36
 - Suspicious filenames: 0
 
 ## Largest Python files
@@ -41,6 +41,7 @@ This report is generated from tracked repository files only. It excludes `.venv`
 | `services/usage_metrics_service.py` | `derive_metrics` | 99 | L154-L252 |
 | `ui/limitations_page.py` | `render_limitations_page` | 99 | L22-L120 |
 | `ui/portfolio_page.py` | `render_landing_page` | 87 | L10-L96 |
+| `scripts/engineering_audit.py` | `render_markdown` | 86 | L159-L244 |
 | `services/interpret_benchmark_service.py` | `compare_generated_to_gold` | 85 | L51-L135 |
 
 ## Streamlit usage
@@ -71,6 +72,7 @@ This report is generated from tracked repository files only. It excludes `.venv`
 | `ui/result_panel.py` | 6 | allowed UI surface |
 | `app.py` | 3 | allowed UI surface |
 | `tests/test_native_ui_patch.py` | 2 | review for UI leakage |
+| `scripts/engineering_audit.py` | 1 | review for UI leakage |
 | `tests/test_core_pipeline_feedback_ux.py` | 1 | review for UI leakage |
 | `tests/test_download_button_keys.py` | 1 | review for UI leakage |
 
@@ -90,6 +92,30 @@ This report is generated from tracked repository files only. It excludes `.venv`
 | `WHAT_THIS_DEMONSTRATES.md` | 38 | > “This project demonstrates how I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.” |
 | `docs/CONNECTOR_HANDOFF_CENTER.md` | 27 | The product signal is not “I built perfect connectors.” It is: |
 | `docs/DEMO_SCRIPT.md` | 13 | “This is a portfolio case study, not a commercial product. It demonstrates how I design AI product workflows for regulated enterprise software.” |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 83 | \| `DEMO_WALKTHROUGH_FOR_HIRING.md` \| 8 \| This project is a portfolio case study, not a commercial product. The demo should show how I design AI product workflows for regulated enterprise software. \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 84 | \| `DEMO_WALKTHROUGH_FOR_HIRING.md` \| 29 \| I built a portfolio-grade AI product case study for regulated enterprise software. It turns a SAF-T/e-invoicing source excerpt into obligations, reviewer corrections, product requirements, Jira-shaped tickets, QA cases with mandatory negative coverage, safer release communication, incident learning and an audit-ready report. The project also persists real usage metrics locally, supports import/export, creates connector handoff payloads and clearly separates real local controls from simulated production controls. \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 85 | \| `HERO_CASE_STUDY.md` \| 14 \| A top-tier portfolio cannot rely only on generic AI outputs. It needs one workflow that proves product judgment: \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 86 | \| `PORTFOLIO_REVIEW_GUIDE.md` \| 5 \| It demonstrates how I design AI product workflows for regulated enterprise software: \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 87 | \| `PORTFOLIO_REVIEW_GUIDE.md` \| 85 \| ## What this project demonstrates about my skills \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 88 | \| `PORTFOLIO_REVIEW_GUIDE.md` \| 116 \| I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions. \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 89 | \| `PORTFOLIO_SCOPE_DISCIPLINE.md` \| 36 \| The intended signal is not “I built everything.” \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 90 | \| `README.md` \| 13 \| It demonstrates how I design AI product workflows for regulated enterprise software: \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 91 | \| `WHAT_THIS_DEMONSTRATES.md` \| 17 \| \\| AI product judgment \\| RAG, citation support, reviewer mode, supported/weak/missing reports \\| Shows I design AI with controls, not just generation. \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 92 | \| `WHAT_THIS_DEMONSTRATES.md` \| 38 \| > “This project demonstrates how I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.” \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 93 | \| `docs/CONNECTOR_HANDOFF_CENTER.md` \| 27 \| The product signal is not “I built perfect connectors.” It is: \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 94 | \| `docs/DEMO_SCRIPT.md` \| 13 \| “This is a portfolio case study, not a commercial product. It demonstrates how I design AI product workflows for regulated enterprise software.” \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 95 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 81 \| \\| `DEMO_WALKTHROUGH_FOR_HIRING.md` \\| 8 \\| This project is a portfolio case study, not a commercial product. The demo should show how I design AI product workflows for regulated enterprise software. \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 96 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 82 \| \\| `DEMO_WALKTHROUGH_FOR_HIRING.md` \\| 29 \\| I built a portfolio-grade AI product case study for regulated enterprise software. It turns a SAF-T/e-invoicing source excerpt into obligations, reviewer corrections, product requirements, Jira-shaped tickets, QA cases with mandatory negative coverage, safer release communication, incident learning and an audit-ready report. The project also persists real usage metrics locally, supports import/export, creates connector handoff payloads and clearly separates real local controls from simulated production controls. \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 97 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 83 \| \\| `HERO_CASE_STUDY.md` \\| 14 \\| A top-tier portfolio cannot rely only on generic AI outputs. It needs one workflow that proves product judgment: \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 98 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 84 \| \\| `PORTFOLIO_REVIEW_GUIDE.md` \\| 5 \\| It demonstrates how I design AI product workflows for regulated enterprise software: \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 99 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 85 \| \\| `PORTFOLIO_REVIEW_GUIDE.md` \\| 85 \\| ## What this project demonstrates about my skills \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 100 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 86 \| \\| `PORTFOLIO_REVIEW_GUIDE.md` \\| 116 \\| I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions. \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 101 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 87 \| \\| `PORTFOLIO_SCOPE_DISCIPLINE.md` \\| 36 \\| The intended signal is not “I built everything.” \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 102 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 88 \| \\| `README.md` \\| 13 \\| It demonstrates how I design AI product workflows for regulated enterprise software: \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 103 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 89 \| \\| `WHAT_THIS_DEMONSTRATES.md` \\| 17 \\| \\\| AI product judgment \\\| RAG, citation support, reviewer mode, supported/weak/missing reports \\\| Shows I design AI with controls, not just generation. \\\| \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 104 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 90 \| \\| `WHAT_THIS_DEMONSTRATES.md` \\| 38 \\| > “This project demonstrates how I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.” \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 105 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 91 \| \\| `docs/CONNECTOR_HANDOFF_CENTER.md` \\| 27 \\| The product signal is not “I built perfect connectors.” It is: \\| \| |
+| `docs/ENGINEERING_HARDENING_REPORT.md` | 106 | \| `docs/ENGINEERING_HARDENING_REPORT.md` \| 92 \| \\| `docs/DEMO_SCRIPT.md` \\| 13 \\| “This is a portfolio case study, not a commercial product. It demonstrates how I design AI product workflows for regulated enterprise software.” \\| \| |
 
 ## Suspicious filenames
 
