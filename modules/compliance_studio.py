@@ -32,7 +32,8 @@ from services.export_service import dict_to_markdown
 from services.enterprise_controls_service import can, document_version_record, record_audit_event, signed_report_manifest
 from services.interpret_benchmark_service import compare_generated_to_gold, load_gold_obligations
 from services.interpret_metrics_service import calculate_interpret_quality_metrics, metrics_as_rows, parse_gold_benchmark_text
-from services.openai_service import call_model_json, embed_texts, render_openai_error
+from services.openai_service import call_model_json, embed_texts
+from ui.openai_error_handler import render_openai_error
 from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from services.human_feedback_service import record_human_reviews, summarize_feedback_inventory
 from services.qa_coverage_service import validate_negative_test_coverage

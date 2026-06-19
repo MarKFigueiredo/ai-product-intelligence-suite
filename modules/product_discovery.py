@@ -10,7 +10,8 @@ import streamlit as st
 from prompts.product_prompt import build_product_prompt
 from services.evaluation_service import evaluate_output
 from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
-from services.openai_service import call_model_json, render_openai_error
+from services.openai_service import call_model_json
+from ui.openai_error_handler import render_openai_error
 from services.product_discovery_service import (
     discovery_quality_summary,
     evaluate_discovery_output,

@@ -9,7 +9,8 @@ import streamlit as st
 from prompts.timeline_prompt import build_timeline_prompt
 from services.evaluation_service import evaluate_output
 from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
-from services.openai_service import call_model_json, render_openai_error
+from services.openai_service import call_model_json
+from ui.openai_error_handler import render_openai_error
 from ui.evaluation_panel import render_evaluation
 from ui.result_panel import render_result
 from ui.visual_components import render_card, render_demo_banner, render_metric_pill, render_score_bar, render_table_preview
