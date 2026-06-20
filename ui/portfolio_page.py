@@ -4,7 +4,13 @@ from __future__ import annotations
 import streamlit as st
 
 from config import APP_NAME
-from ui.visual_components import render_card, render_compact_card_grid, render_kpi_grid, render_score_bar, render_callout
+from ui.visual_components import (
+    render_callout,
+    render_card,
+    render_compact_card_grid,
+    render_kpi_grid,
+    render_score_bar,
+)
 
 
 def render_landing_page() -> None:

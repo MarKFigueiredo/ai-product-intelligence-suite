@@ -9,20 +9,21 @@ import streamlit as st
 from config import APP_NAME, APP_TAGLINE, CSS
 from modules import compliance_studio, decision_timeline, product_discovery, release_readiness
 from ui.about_page import render_about_me
-from ui.enterprise_page import render_enterprise_readiness_page
-from ui.guided_demo_page import render_guided_demo_page
-from ui.connector_handoff_page import render_connector_handoff_page
-from ui.evidence_report_page import render_evidence_report_page
 from ui.approval_workflow_page import render_approval_workflow_page
-from ui.document_versions_page import render_document_versions_page
-from ui.quality_learning_page import render_quality_learning_page
 from ui.claim_hygiene_page import render_claim_hygiene_page
+from ui.connector_handoff_page import render_connector_handoff_page
+from ui.document_versions_page import render_document_versions_page
+from ui.enterprise_page import render_enterprise_readiness_page
+from ui.evidence_report_page import render_evidence_report_page
+from ui.guided_demo_page import render_guided_demo_page
+from ui.limitations_page import render_limitations_page
 from ui.lineage_page import render_lineage_page
 from ui.metrics_page import render_usage_metrics_page
 from ui.portfolio_page import render_landing_page, render_portfolio_landing
-from ui.limitations_page import render_limitations_page
+from ui.quality_learning_page import render_quality_learning_page
 from ui.sidebar import render_sidebar
 from ui.streamlit_secrets import sync_streamlit_secrets_to_env
+
 sync_streamlit_secrets_to_env()
 
 

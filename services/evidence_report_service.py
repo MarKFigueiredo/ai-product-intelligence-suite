@@ -5,7 +5,13 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Dict, List
 
-from services.usage_metrics_service import list_data_events, list_metric_snapshots, list_workflow_runs, usage_summary, utc_now
+from services.usage_metrics_service import (
+    list_data_events,
+    list_metric_snapshots,
+    list_workflow_runs,
+    usage_summary,
+    utc_now,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_FILE = ROOT / "REAL_USAGE_EVIDENCE_REPORT.md"

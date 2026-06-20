@@ -18,7 +18,10 @@ sys.path.insert(0, str(ROOT))
 
 from services.citation_verifier import verify_citations_advanced  # noqa: E402
 from services.interpret_benchmark_service import load_gold_obligations  # noqa: E402
-from services.interpret_metrics_service import calculate_interpret_quality_metrics, metrics_as_rows  # noqa: E402
+from services.interpret_metrics_service import (  # noqa: E402
+    calculate_interpret_quality_metrics,
+    metrics_as_rows,
+)
 from services.rag_service import SourceChunk  # noqa: E402
 
 

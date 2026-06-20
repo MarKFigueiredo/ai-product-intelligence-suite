@@ -18,9 +18,9 @@ import time
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Tuple
+from typing import Any, Dict, List
 
-from services.enterprise_controls_service import canonical_json, stable_hash, sign_payload
+from services.enterprise_controls_service import canonical_json, sign_payload, stable_hash
 from services.qa_coverage_service import negative_coverage_metrics
 
 ROOT = Path(__file__).resolve().parents[1]

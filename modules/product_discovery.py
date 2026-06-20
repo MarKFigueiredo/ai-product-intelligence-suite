@@ -1,7 +1,6 @@
 """Discover — Product Discovery Studio."""
 from __future__ import annotations
 
-import json
 from typing import Any, Dict
 
 import pandas as pd
@@ -9,25 +8,23 @@ import streamlit as st
 
 from prompts.product_prompt import build_product_prompt
 from services.evaluation_service import evaluate_output
-from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from services.openai_service import call_model_json
-from ui.openai_error_handler import render_openai_error
 from services.product_discovery_service import (
-    discovery_quality_summary,
     evaluate_discovery_output,
     parse_interpret_json,
     summarise_interpret_context,
 )
 from services.product_quality_service import build_pipeline_from_discovery, compute_prd_rule_completeness
 from services.qa_coverage_service import validate_negative_test_coverage
+from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from ui.evaluation_panel import render_evaluation
+from ui.openai_error_handler import render_openai_error
 from ui.result_panel import render_result
 from ui.visual_components import (
     render_card,
     render_demo_banner,
     render_metric_pill,
     render_quality_gate_card,
-    render_score_bar,
     render_section_kicker,
     render_table_preview,
 )

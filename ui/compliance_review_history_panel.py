@@ -2,33 +2,21 @@
 
 from __future__ import annotations
 
-from __future__ import annotations
-from services.compliance_demo_output import build_demo_output
 from typing import Any, Dict, List
+
 import pandas as pd
 import streamlit as st
-from prompts.compliance_prompt import build_compliance_prompt
-from core.pipeline import run_interpret_review_discover_pipeline
-from services.citation_verifier import (
-    build_human_review_queue,
-    build_obligation_support_matrix,
-    grounding_heatmap_items,
-    grounding_summary,
-    highlight_claim_terms,
-    rule_based_version_diff,
-    verify_citations_advanced,
+
+from services.enterprise_controls_service import (
+    can,
+    document_version_record,
+    record_audit_event,
+    signed_report_manifest,
 )
-from services.cost_service import estimate_run_cost
-from services.evaluation_service import evaluate_output
-from services.export_service import dict_to_markdown
-from services.enterprise_controls_service import can, document_version_record, record_audit_event, signed_report_manifest
-from services.interpret_benchmark_service import compare_generated_to_gold, load_gold_obligations
-from services.interpret_metrics_service import calculate_interpret_quality_metrics, metrics_as_rows, parse_gold_benchmark_text
-from services.openai_service import call_model_json, embed_texts
-from ui.openai_error_handler import render_openai_error
-from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from services.human_feedback_service import record_human_reviews, summarize_feedback_inventory
-from services.qa_coverage_service import validate_negative_test_coverage
+from services.rag_service import (
+    SourceChunk,
+)
 from services.run_history_service import (
     append_review_report,
     append_run_history,
@@ -36,27 +24,15 @@ from services.run_history_service import (
     build_reviewer_items,
     compare_recent_runs,
     load_run_history,
-    stable_hash as run_stable_hash,
     summarise_interpret_run,
 )
-from services.rag_service import (
-    SourceChunk,
-    chunk_text,
-    extract_text_from_upload,
-    highlight_terms,
-    rank_chunks,
-    source_coverage,
+from services.run_history_service import (
+    stable_hash as run_stable_hash,
 )
-from ui.evaluation_panel import render_evaluation
-from ui.result_panel import render_result
 from ui.visual_components import (
-    render_demo_banner,
-    render_grounding_heatmap,
     render_metric_pill,
-    render_score_bar,
-    render_standard_export_bar,
-    render_table_preview,
 )
+
 
 def render_reviewer_and_run_history_panel(
     data: Dict[str, Any],

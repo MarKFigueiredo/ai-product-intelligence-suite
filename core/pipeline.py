@@ -8,7 +8,7 @@ UI rendering stays in modules/ui and domain-specific heuristics stay in services
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Callable, Dict, Iterable, List, Sequence
+from typing import Any, Callable, Dict, List, Sequence
 
 from services.citation_verifier import grounding_summary, verify_citations_advanced
 from services.human_feedback_service import (

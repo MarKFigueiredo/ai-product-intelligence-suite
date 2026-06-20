@@ -10,7 +10,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any, Dict, Iterable, List
 
-from services.enterprise_controls_service import stable_hash, sign_payload
+from services.enterprise_controls_service import sign_payload, stable_hash
 
 APPROVAL_STATES = [
     "Draft",

@@ -5,7 +5,10 @@ from typing import Any, Dict
 
 import streamlit as st
 
-from services.evidence_report_service import generate_real_usage_evidence_markdown, save_real_usage_evidence_report
+from services.evidence_report_service import (
+    generate_real_usage_evidence_markdown,
+    save_real_usage_evidence_report,
+)
 from services.usage_metrics_service import export_usage_json_bytes, export_usage_zip_bytes, usage_summary
 
 

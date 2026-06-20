@@ -5,7 +5,6 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 # Existing service files with known UI references. These are allowed for now so
@@ -120,7 +119,6 @@ def known_debt() -> list[BoundaryFinding]:
 
 
 def render_markdown() -> str:
-    all_findings = boundary_findings()
     hard_violations = violations()
     debt = known_debt()
 

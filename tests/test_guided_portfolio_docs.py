@@ -12,7 +12,6 @@ from services.portfolio_demo_service import (
     release_gate_dashboard,
 )
 from services.run_comparison_service import compare_runs
-from services.qa_coverage_service import validate_negative_test_coverage
 
 
 def test_guided_hero_output_has_release_ready_negative_coverage():

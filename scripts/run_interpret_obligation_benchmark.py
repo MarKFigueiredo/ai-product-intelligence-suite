@@ -15,7 +15,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from services.interpret_benchmark_service import compare_generated_to_gold, load_gold_obligations  # noqa: E402
+from services.interpret_benchmark_service import (  # noqa: E402
+    compare_generated_to_gold,
+    load_gold_obligations,
+)
 
 
 def main() -> None:

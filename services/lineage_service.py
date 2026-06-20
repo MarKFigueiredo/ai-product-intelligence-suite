@@ -7,7 +7,7 @@ release notes and reports can become stale.
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from typing import Any, Dict, Iterable, List, Set
+from typing import Any, Dict, List, Set
 
 
 def parse_time(value: str | None) -> datetime:

@@ -8,7 +8,7 @@ criterion.
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, Iterable, List, Sequence
+from typing import Any, Dict, List, Sequence
 
 NEGATIVE_KEYWORDS = {
     "negative",

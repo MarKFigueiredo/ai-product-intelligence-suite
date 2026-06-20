@@ -1,11 +1,18 @@
 """Sidebar rendering."""
 from __future__ import annotations
 
-from typing import Dict, Any
+from typing import Any, Dict
 
 import streamlit as st
 
-from config import AVAILABLE_MODELS, DEFAULT_EMBEDDING_MODEL, DEFAULT_MODEL, DETAIL_LEVELS, LANGUAGES, REVIEW_MODES, WORKFLOWS
+from config import (
+    AVAILABLE_MODELS,
+    DEFAULT_EMBEDDING_MODEL,
+    DEFAULT_MODEL,
+    DETAIL_LEVELS,
+    LANGUAGES,
+    REVIEW_MODES,
+)
 from services.enterprise_controls_service import ROLES
 
 

@@ -8,7 +8,12 @@ import pandas as pd
 import streamlit as st
 
 from services.claim_hygiene_service import audit_portfolio_claims, safe_positioning_statement
-from ui.visual_components import render_callout, render_kpi_grid, render_page_intro, render_status_badge, status_tone
+from ui.visual_components import (
+    render_callout,
+    render_kpi_grid,
+    render_page_intro,
+    render_status_badge,
+)
 
 
 def render_claim_hygiene_page(settings: Dict[str, Any]) -> None:

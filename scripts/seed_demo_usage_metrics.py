@@ -3,10 +3,10 @@
 This creates realistic *local demo usage* runs so reviewers can inspect run
 comparison and evidence report behavior. These are not production metrics.
 """
-from services.portfolio_demo_service import hero_output_shape, release_gate_dashboard
-from services.usage_metrics_service import record_output_run, record_data_event
 from services.connector_handoff_service import handoff_payloads
+from services.portfolio_demo_service import hero_output_shape, release_gate_dashboard
 from services.real_connectors_service import save_connector_payload_locally
+from services.usage_metrics_service import record_data_event, record_output_run
 
 settings = {
     "demo_user": "Marco Figueiredo",

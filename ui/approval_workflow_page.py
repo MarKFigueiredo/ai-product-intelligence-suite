@@ -4,7 +4,13 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
-from services.approval_workflow_service import APPROVAL_STATES, approval_gate, can_transition, hero_approval_workflow, transition_item
+from services.approval_workflow_service import (
+    APPROVAL_STATES,
+    approval_gate,
+    can_transition,
+    hero_approval_workflow,
+    transition_item,
+)
 from services.usage_metrics_service import record_data_event
 
 

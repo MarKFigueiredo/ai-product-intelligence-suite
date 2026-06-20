@@ -6,8 +6,16 @@ from typing import Any, Dict
 import pandas as pd
 import streamlit as st
 
-from services.evidence_report_service import generate_real_usage_evidence_markdown, save_real_usage_evidence_report
-from services.lineage_service import detect_stale_artifacts, hero_lineage_state, impact_analysis, timeline_events
+from services.evidence_report_service import (
+    generate_real_usage_evidence_markdown,
+    save_real_usage_evidence_report,
+)
+from services.lineage_service import (
+    detect_stale_artifacts,
+    hero_lineage_state,
+    impact_analysis,
+    timeline_events,
+)
 from services.portfolio_demo_service import (
     GUIDED_STEPS,
     PERSONA_REVIEW_PATHS,

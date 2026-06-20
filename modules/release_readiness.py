@@ -8,12 +8,19 @@ import streamlit as st
 
 from prompts.release_prompt import build_release_prompt
 from services.evaluation_service import evaluate_output
-from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from services.openai_service import call_model_json
-from ui.openai_error_handler import render_openai_error
+from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from ui.evaluation_panel import render_evaluation
+from ui.openai_error_handler import render_openai_error
 from ui.result_panel import render_result
-from ui.visual_components import render_card, render_demo_banner, render_metric_pill, render_placeholder_panel, render_score_bar, render_table_preview
+from ui.visual_components import (
+    render_card,
+    render_demo_banner,
+    render_metric_pill,
+    render_placeholder_panel,
+    render_score_bar,
+    render_table_preview,
+)
 
 EXPECTED = [
     "customer_facing_release_note", "internal_support_note", "qa_checklist", "support_faq",

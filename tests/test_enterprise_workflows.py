@@ -2,7 +2,11 @@ from prompts.product_prompt import build_product_prompt
 from prompts.release_prompt import build_release_prompt
 from prompts.timeline_prompt import build_timeline_prompt
 from services.product_quality_service import compute_prd_rule_completeness
-from services.run_history_service import build_final_review_report, build_reviewer_items, summarise_interpret_run
+from services.run_history_service import (
+    build_final_review_report,
+    build_reviewer_items,
+    summarise_interpret_run,
+)
 
 
 def _complete_discovery_payload():

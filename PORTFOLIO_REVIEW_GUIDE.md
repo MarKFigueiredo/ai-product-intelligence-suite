@@ -2,7 +2,7 @@
 
 This project is a portfolio case study, not a commercial product.
 
-It demonstrates how I design AI product workflows for regulated enterprise software:
+It demonstrates AI-assisted product workflow design AI product workflows for regulated enterprise software:
 
 1. domain understanding;
 2. AI workflow design;
@@ -18,7 +18,7 @@ The goal is not to prove that this Streamlit prototype is production-ready. The 
 
 ## Read this in 5 minutes
 
-Start here if you are a recruiter, hiring manager or interviewer doing a first-pass screen.
+Start here if you are a recruiter, reviewer or interviewer doing a first-pass screen.
 
 1. **App: Guided Demo — Portfolio Review** — use the persona paths and hero workflow for fastest understanding.
 2. **README opening section** — understand the positioning and what the project is / is not.
@@ -38,7 +38,7 @@ What you should learn in 5 minutes:
 
 ## Review this in 15 minutes
 
-Use this path if you are a hiring manager, Principal PM, product leader or technical interviewer.
+Use this path if you are a reviewer, Principal PM, product leader or technical interviewer.
 
 1. **App: Guided Demo — Portfolio Review** — release gates, evidence drawer, lineage and real-vs-simulated table.
 2. **`README.md`** — product thesis, workflow summary and local run instructions.
@@ -52,7 +52,7 @@ What you should learn in 15 minutes:
 
 - How I structure ambiguous regulatory input into product decisions.
 - How I use AI without hiding uncertainty or failure modes.
-- How I think about human review, risk, quality and downstream workflow integration.
+- Product reasoning approach about human review, risk, quality and downstream workflow integration.
 - How I separate prototype implementation from production-readiness claims.
 
 ---
@@ -82,7 +82,7 @@ What you should learn in 45 minutes:
 
 ---
 
-## What this project demonstrates about my skills
+## Evidence map for reviewers
 
 | Skill | Where to see it | What it demonstrates |
 |---|---|---|
@@ -103,7 +103,7 @@ What you should learn in 45 minutes:
 | Reviewer | Best path |
 |---|---|
 | Recruiter | README → `WHAT_THIS_DEMONSTRATES.md` → `HERO_CASE_STUDY.md` |
-| Hiring manager | README → Hero case → Product strategy → Demo script |
+| Reviewer | README → Hero case → Product strategy → Demo script |
 | Principal PM | Product strategy → Error taxonomy/trade-offs → Hero case → Evaluation results |
 | Engineering lead | Architecture → Enterprise controls service → Tests → Evaluation scripts |
 | Compliance/legal stakeholder | Hero case → Claim risk table → Error taxonomy → Validation limitations |
@@ -113,7 +113,7 @@ What you should learn in 45 minutes:
 
 ## One-sentence summary
 
-I design AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
+The project demonstrates AI product workflows that turn ambiguous compliance inputs into auditable product decisions.
 
 
 

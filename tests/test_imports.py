@@ -6,7 +6,12 @@ def test_core_imports():
     import pytest
     pytest.importorskip("streamlit")
     import config  # noqa: F401
-    from modules import compliance_studio, decision_timeline, product_discovery, release_readiness  # noqa: F401
+    from modules import (  # noqa: F401
+        compliance_studio,
+        decision_timeline,
+        product_discovery,
+        release_readiness,
+    )
     from services import citation_verifier, cost_service, export_service, rag_service  # noqa: F401
 
 

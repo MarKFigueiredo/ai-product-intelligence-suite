@@ -8,9 +8,9 @@ acceptance.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import re
 import sys
+from pathlib import Path
 from typing import Dict
 
 ROOT = Path(__file__).resolve().parents[1]

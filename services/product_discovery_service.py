@@ -13,7 +13,6 @@ from services.evaluation_service import evaluate_output
 from services.product_quality_service import build_pipeline_from_discovery, compute_prd_rule_completeness
 from services.qa_coverage_service import validate_negative_test_coverage
 
-
 DISCOVER_EXPECTED_SECTIONS = [
     "problem_statement",
     "personas",

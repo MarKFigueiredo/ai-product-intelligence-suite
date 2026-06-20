@@ -10,7 +10,7 @@ import hashlib
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Tuple
+from typing import Any, Dict, Iterable, List
 
 from services.citation_verifier import build_obligation_support_matrix, grounding_summary
 

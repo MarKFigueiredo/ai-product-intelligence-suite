@@ -4,11 +4,10 @@ from __future__ import annotations
 import html
 from typing import Any, Dict, Iterable, List, Sequence
 
-from config import APP_NAME
-
 import pandas as pd
 import streamlit as st
 
+from config import APP_NAME
 from services.export_service import (
     dict_to_markdown,
     extract_named_tables,

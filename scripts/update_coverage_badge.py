@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-
 COVERAGE_JSON = Path("coverage.json")
 BADGE_PATH = Path(".github/badges/coverage.svg")
 

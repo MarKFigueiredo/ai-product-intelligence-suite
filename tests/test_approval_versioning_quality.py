@@ -1,5 +1,14 @@
-from services.approval_workflow_service import approval_gate, can_transition, hero_approval_workflow, transition_item
-from services.document_version_service import compare_obligation_sets, document_version_record, hero_document_version_diff
+from services.approval_workflow_service import (
+    approval_gate,
+    can_transition,
+    hero_approval_workflow,
+    transition_item,
+)
+from services.document_version_service import (
+    compare_obligation_sets,
+    document_version_record,
+    hero_document_version_diff,
+)
 from services.quality_learning_service import workflow_learning_summary
 
 

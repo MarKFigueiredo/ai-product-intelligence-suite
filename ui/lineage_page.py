@@ -6,7 +6,12 @@ from typing import Any, Dict
 import pandas as pd
 import streamlit as st
 
-from services.lineage_service import detect_stale_artifacts, hero_lineage_state, impact_analysis, timeline_events
+from services.lineage_service import (
+    detect_stale_artifacts,
+    hero_lineage_state,
+    impact_analysis,
+    timeline_events,
+)
 
 
 def render_lineage_page(settings: Dict[str, Any]) -> None:

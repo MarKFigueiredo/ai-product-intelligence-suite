@@ -6,8 +6,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from ui.visual_components import render_card, render_metric_pill, render_score_bar
-
+from ui.visual_components import render_card, render_score_bar
 
 ROOT = Path(__file__).resolve().parents[1]
 

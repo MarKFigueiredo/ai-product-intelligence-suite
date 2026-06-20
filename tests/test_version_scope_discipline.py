@@ -5,7 +5,6 @@ from pathlib import Path
 
 from config import APP_NAME, APP_VERSION, CORE_REVIEW_WORKFLOWS, REVIEW_MODES, WORKFLOWS
 
-
 RUNTIME_PATHS = [Path("app.py"), Path("config.py"), Path("ui"), Path("modules"), Path("services"), Path("assets/screenshots")]
 STALE_SUITE_RE = re.compile(r"AI Product Intelligence Suite v\d+(?:\.\d+)?", re.I)
 

@@ -8,12 +8,17 @@ import streamlit as st
 
 from prompts.timeline_prompt import build_timeline_prompt
 from services.evaluation_service import evaluate_output
-from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from services.openai_service import call_model_json
-from ui.openai_error_handler import render_openai_error
+from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from ui.evaluation_panel import render_evaluation
+from ui.openai_error_handler import render_openai_error
 from ui.result_panel import render_result
-from ui.visual_components import render_card, render_demo_banner, render_metric_pill, render_score_bar, render_table_preview
+from ui.visual_components import (
+    render_card,
+    render_demo_banner,
+    render_metric_pill,
+    render_table_preview,
+)
 
 EXPECTED = [
     "executive_one_page_brief", "customer_escalation_context", "chronological_timeline", "actor_map",
@@ -151,12 +156,29 @@ def render_timeline_visual(events: List[Dict[str, Any]]) -> None:
 def render_timeline_dashboard(data: Dict[str, Any]) -> None:
     brief = data.get("executive_one_page_brief", {}) if isinstance(data.get("executive_one_page_brief"), dict) else {}
     c1, c2, c3, c4, c5 = st.columns(5)
-    with c1: render_metric_pill("Events", str(len(data.get("chronological_timeline", []) or [])), "good")
-    with c2: render_metric_pill("Actors", str(len(data.get("actor_map", []) or [])), "mid")
-    with c3: render_metric_pill("Contradictions", str(len(data.get("contradictions_or_inconsistencies", []) or [])), "bad" if data.get("contradictions_or_inconsistencies") else "good")
-    with c4: render_metric_pill("Risks", str(len(data.get("risk_register", []) or [])), "bad" if data.get("risk_register") else "good")
+    with c1:
+        render_metric_pill("Events", str(len(data.get("chronological_timeline", []) or [])), "good")
+    with c2:
+        render_metric_pill("Actors", str(len(data.get("actor_map", []) or [])), "mid")
+    with c3:
+        render_metric_pill(
+            "Contradictions",
+            str(len(data.get("contradictions_or_inconsistencies", []) or [])),
+            "bad" if data.get("contradictions_or_inconsistencies") else "good",
+        )
+    with c4:
+        render_metric_pill(
+            "Risks",
+            str(len(data.get("risk_register", []) or [])),
+            "bad" if data.get("risk_register") else "good",
+        )
     max_sev = max([int(e.get("severity_score") or 0) for e in data.get("chronological_timeline", []) or []] or [0])
-    with c5: render_metric_pill("Max severity", f"{max_sev}/10", "bad" if max_sev >= 8 else "mid" if max_sev >= 5 else "good")
+    with c5:
+        render_metric_pill(
+            "Max severity",
+            f"{max_sev}/10",
+            "bad" if max_sev >= 8 else "mid" if max_sev >= 5 else "good",
+        )
 
     st.subheader("Executive one-page brief")
     b1, b2 = st.columns(2)
