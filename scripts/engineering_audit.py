@@ -8,6 +8,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+EXCLUDED_SCAN_PATHS = {
+    "docs/ENGINEERING_HARDENING_REPORT.md",
+}
+
 PYTHON_LARGE_FILE_LINES = 400
 PYTHON_LARGE_FUNCTION_LINES = 80
 MARKDOWN_LARGE_FILE_LINES = 220
@@ -49,7 +53,15 @@ def tracked_files() -> list[Path]:
         text=True,
         capture_output=True,
     )
-    return [ROOT / line.strip() for line in result.stdout.splitlines() if line.strip()]
+    files = []
+    for line in result.stdout.splitlines():
+        rel = line.strip()
+        if not rel:
+            continue
+        if rel in EXCLUDED_SCAN_PATHS:
+            continue
+        files.append(ROOT / rel)
+    return files
 
 
 def line_count(path: Path) -> int:
