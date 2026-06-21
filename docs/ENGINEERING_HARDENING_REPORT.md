@@ -15,7 +15,7 @@ This report is generated from tracked repository files only. It excludes `.venv`
 
 | File | Lines |
 |---|---:|
-| `modules/compliance_studio.py` | 648 |
+| `modules/compliance_studio.py` | 647 |
 | `services/usage_metrics_service.py` | 551 |
 | `services/citation_verifier.py` | 508 |
 
@@ -36,8 +36,8 @@ This report is generated from tracked repository files only. It excludes `.venv`
 | `ui/enterprise_page.py` | `render_enterprise_readiness_page` | 145 | L29-L173 |
 | `ui/about_page.py` | `render_about_me` | 127 | L9-L135 |
 | `services/portfolio_demo_service.py` | `hero_output_shape` | 112 | L137-L248 |
-| `modules/compliance_studio.py` | `render` | 109 | L540-L648 |
-| `modules/compliance_studio.py` | `render_compliance_dashboard` | 106 | L145-L250 |
+| `modules/compliance_studio.py` | `render` | 109 | L539-L647 |
+| `modules/compliance_studio.py` | `render_compliance_dashboard` | 106 | L144-L249 |
 | `services/usage_metrics_service.py` | `derive_metrics` | 99 | L154-L252 |
 | `ui/limitations_page.py` | `render_limitations_page` | 99 | L21-L119 |
 | `ui/portfolio_page.py` | `render_landing_page` | 87 | L16-L102 |

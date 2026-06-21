@@ -49,6 +49,7 @@ from services.rag_service import (
 from services.run_history_service import (
     stable_hash as run_stable_hash,
 )
+from services.source_lookup_service import source_by_id
 from services.usage_metrics_service import elapsed_ms, now_ms, record_output_run, save_export_package_locally
 from ui.compliance_review_history_panel import render_reviewer_and_run_history_panel
 from ui.evaluation_panel import render_evaluation
@@ -110,8 +111,6 @@ def _prepare_sources(
     return all_chunks, ranked
 
 
-def _source_by_id(sources: List[SourceChunk]) -> Dict[str, SourceChunk]:
-    return {s.id: s for s in sources}
 
 
 def _parse_uploaded_gold(uploaded_gold: Any) -> tuple[Dict[str, Any] | None, str]:
@@ -204,7 +203,7 @@ def render_compliance_dashboard(
         if sources:
             source_ids = [s.id for s in sources]
             selected_source_id = st.selectbox("Jump to cited source", source_ids, key="citation_source_select_dashboard")
-            selected_source = _source_by_id(sources).get(selected_source_id)
+            selected_source = source_by_id(sources).get(selected_source_id)
             related_rows = [r for r in citation_rows if r.get("citation") == selected_source_id]
             selected_claim = ""
             if related_rows:
@@ -268,7 +267,7 @@ def render_source_quote_matrix(data: Dict[str, Any], citation_rows: List[Dict[st
     labels = [f"{i+1}. {r.get('citation')} · {r.get('support_score')}% · {str(r.get('claim'))[:90]}" for i, r in enumerate(citation_rows)]
     selected = st.selectbox("Select a claim to inspect", range(len(labels)), format_func=lambda i: labels[i], key="deep_link_citation_select")
     row = citation_rows[selected]
-    source = _source_by_id(sources).get(row.get("citation"))
+    source = source_by_id(sources).get(row.get("citation"))
     c1, c2 = st.columns([1.04, 1.25])
     with c1:
         st.markdown("**Generated claim**")
