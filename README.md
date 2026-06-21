@@ -156,6 +156,12 @@ Additional companion domains show generalization thinking:
 
 The payments playbook is intentionally kept outside the main Streamlit workflow to preserve scope discipline.
 
+## Runtime and reproducibility
+
+The project is tested with Python 3.12.
+
+Dependency versions are pinned with compatible-release constraints in `requirements.txt` to keep the public demo reproducible while still allowing safe patch-level updates.
+
 ## Run locally
 
 ```bash
